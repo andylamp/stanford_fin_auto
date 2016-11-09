@@ -1,4 +1,4 @@
-# Stanford dbclass solutions
+# Stanford Automata Theory solutions
 
 
 In this repository I've compiled my solutions for the exercises and quizzes that I did
