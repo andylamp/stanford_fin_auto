@@ -33,6 +33,7 @@ Let's examine all of our options, one by one:
  3. `a|ba|a|ab|aa` → `a|a|aa` → `aaaa`, `s` = `aa` thus `aa|aa` so it **IS** in `L`
  4. `aba|a|ab|a|a` → `aba|a|ba` → `abaaba`, `s` = `aba` thus `aba|aba` so it **IS** in `L`
  
-The only option that is valid in this regard is **option 2**: `a|b|aaaba|a|` as `u=a`, `v=ba`, `w=a`, `x=ab`, 
-and `y=aa`, thus removing `v` and `x` string blocks from `z` then we are left with `a|a|aa` which is **not**
-in `L` due to the fact that it has *only* `a`'s and no `b`'s.
+The only option that is valid in this regard is **option 2**: `a|b|aaaba|a|` as `u=a`, `v=b`, `w=aaaba`, `x=a`, 
+and `y=ε`, thus removing `v` and `x` string blocks from `z` then we are left with `a|aaaba|` and is 
+transformed into `aaaaba` which as we said before cannot be split into two identical `s`'s and due 
+to the fact that it cannot be in `L`.
