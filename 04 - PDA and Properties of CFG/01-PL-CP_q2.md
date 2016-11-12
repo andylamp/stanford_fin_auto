@@ -1,4 +1,4 @@
-# Week 3, Question 2
+# Week 4, Question 2
 
 Suppose one transition rule of some PDA `P` is `δ(q,0,X)` = `{(p,YZ), (r,XY)}`. If we convert PDA `P` to 
 an equivalent context-free grammar `G` in the manner described in the class videos. which of the following 
@@ -29,7 +29,7 @@ Then we continue to tackle the other move, which is `(r, XY)`, which translates 
 
  * `[qXs]` → `0[rXt][tYs]`
 
-# Answers
+# Answer
 
 In my instance I had the following options to select from:
 

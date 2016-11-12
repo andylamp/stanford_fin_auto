@@ -1,4 +1,4 @@
-# Week 3, Question 3
+# Week 4, Question 3
 
 The language `L` = {`ss` | `s` is a string of `a`'s and `b`'s} is not a context-free language. In order to 
 prove that `L` is not context-free we need to show that for every integer `n`, there is some string `z` 
@@ -17,7 +17,7 @@ the one choice that is not comprised out of *both* `a`'s and `b`'s.
 Now the tricky part is to note that the resulting string `uwy` has to abide by `L` rules; hence we need to have 
 `ss` which is two consecutive identical strings.
 
-# Answers
+# Answer
 
 In my instance I had the following options to select from:
 
