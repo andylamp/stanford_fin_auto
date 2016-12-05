@@ -3,7 +3,9 @@
 Let `L` be the language of the grammar `G`:
 
  `S` → `AB`
+ 
  `A` → `aAb` | `aA` | `ε`
+ 
  `B` → `bBa` | `c`
 
 The operation `min(L)` returns those strings in `L` such that no proper prefix is in `L`. Determine the language 
