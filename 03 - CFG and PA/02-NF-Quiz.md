@@ -1,6 +1,6 @@
 # Week 3, Quiz 2
 
-# Question 1
+## Question 1
 
 Let the grammar `G` of `L` be the one below:
 
@@ -21,7 +21,7 @@ Let the grammar `G` of `L` be the one below:
 Then select from your given statements in gradiance the one that is 
 **false**.
 
-# Find all generating symbols
+### Find all generating symbols
 
 Recall that a grammar symbol is a generating one if there is a derivation of at 
 *least* one terminal string that starts with that particular symbol. In our
@@ -33,12 +33,12 @@ is a *terminal symbol*.
  * `D` is discovered as a generating symbol because `D` → `d` and `d`
  is a *terminal symbol*.
 
-# Eliminate all *useless productions*
+### Eliminate all *useless productions*
 
 This a two step process, first we eliminate the useless unit productions and then
 we eliminate the useless productions from the resulting grammar.
 
-## Eliminate unit productions
+#### Eliminate unit productions
 
 To do that we first have to create two distinct sets which have the following 
 properties:
@@ -50,7 +50,7 @@ properties:
 We see that this grammar does not have any unit production that is not towards a 
 generating symbol, yet.
 
-## Eliminate useless productions
+#### Eliminate useless productions
 
 We start the recursive *discovery* algorithm which has the following steps:
 
@@ -70,7 +70,7 @@ Thus our final grammar becomes:
 All other states are removed because they could not be added to the set using the 
 recursive discovery algorithm.
 
-# Answer
+### Answer
 
 In my instance I had the following options to select from:
 
@@ -83,7 +83,7 @@ In my instance I had the following options to select from:
 In this question we have to select the option that is **FALSE**, which is based on the
 previous statements **option 1**: "`B` is reachable".
 
-# Question 2
+## Question 2
 
 Let the grammar `G` of `L` be the one below:
 
@@ -103,7 +103,7 @@ Let the grammar `G` of `L` be the one below:
 
 `G` → `AG` | `BD`
 
-# Find the nullable symbols
+### Find the nullable symbols
 
 First let's find the symbols that are *immediately* nullable:
 
@@ -123,7 +123,7 @@ No other symbols can be nullable based on our given grammar `G`, thus the set
 of nullable symbols is the following `N` = {`A`, `B`, `D`, `G`, `S`}.
 
 
-# Answer
+### Answer
 
 In my instance I had the following options to select from:
 
@@ -136,7 +136,7 @@ In my instance I had the following options to select from:
 From those we had to select the option that was **TRUE**, given the previous statements
 we can easily see that the correction is **option 2**: `A` is not nullable.
 
-# Question 3
+## Question 3
 
 Let the grammar `G` of `L` be the one below:
 
@@ -152,7 +152,7 @@ Let the grammar `G` of `L` be the one below:
 
 `E` → `D1` | `S`
 
-# Find all unit pairs
+### Find all unit pairs
 
 Recall that a *unit pair* (`X`, `Y`) of a context-free grammar (CFG) is a pair where
 the following conditions hold:
@@ -196,7 +196,7 @@ So finally the `X` =>* {`Y1`, `Y2`...`Yn`} are:
 
 `E`: {`E`, `A`, `B`, `E`, `S`}
 
-# Answer
+### Answer
 
 In my instance I had the following options to select from:
 
@@ -209,7 +209,7 @@ In my instance I had the following options to select from:
 In this question we have to select the option that is **NOT** a unit pair, which is 
 based on the previous statements **option 1**: "`B` is reachable".
 
-# Question 4
+## Question 4
 
 Let the grammar `G` of `L` be the one below:
 
@@ -223,7 +223,7 @@ Let the grammar `G` of `L` be the one below:
 
 `E` → `D1` | `S`
 
-# Eliminate all unit productions
+### Eliminate all unit productions
 
 To do that we first have to create two distinct sets which have the following 
 properties:
@@ -295,7 +295,7 @@ Now the final grammar based on the union of the `p2` and the above is:
 In this answer there are *redundant* symbols, but their elimination was not part of this exercise -- I'll leave it
 to you to do it.
 
-# Answer
+### Answer
 
 In my instance I had the following options to select from:
 
@@ -308,7 +308,7 @@ In my instance I had the following options to select from:
 In this question we have to select the option that is part of the new grammar, which is 
 based on the previous statements **option 4**: "`B` → `C0`".
 
-# Question 5
+## Question 5
 
 Suppose we execute the Chomsky-normal-form conversion algorithm described in the videos. Let `A` → `BC0DE` 
 be one of the productions of the given grammar, which has already been freed of `ε`-productions and unit 
@@ -317,7 +317,7 @@ productions.
 Suppose that in our construction, we introduce new variable `Xa` to derive a terminal `a`, and when we need 
 to split the right side of a production, we use new variables `Y1`, `Y2`,...
 
-# Replacing the production
+### Replacing the production
 
 Now assuming the Chomsky-Normal-Form (CNF) we use the following methodology to break up the relations:
 
@@ -339,7 +339,7 @@ which are the following:
 
 `Y3` → `DE`
 
-# Answer
+### Answer
 
 In my instance I had the following options to select from:
 
@@ -351,7 +351,7 @@ In my instance I had the following options to select from:
 In this question we have to select the option that is correct based on the mixed body breakup rules, 
 which based on the previous statements is **option 3**: "`Y3` → `DE`".
 
-# Question 6
+## Question 6
 
 Let the grammar `G` of `L` be the one below:
 
@@ -367,7 +367,7 @@ The above grammar `G`, is one whose variables and terminals are **NOT** named us
 Any of symbols `R` through `Z` could be either a variable or terminal; it is your job to figure out which is 
 which, and which could be the start symbol.
 
-# Finding Nemo (or... symbols)
+### Finding Nemo (or... symbols)
 
 Thing is, there is one big distinction that we can deduce the terminal symbols; a terminal symbol **cannot** be
 a generating one; which means that it can only be on the right-side of the productions and never on the left.
@@ -378,7 +378,7 @@ Additionally a starting symbol has to be on the left-side and maybe on the right
 we can clearly see that `R`, `T`, `V` and `X` appear on the left-side and `T`, `V` and `X` appear on both sides.
 We can deduce with certainty that `R` is a starting symbol.
 
-# Answer
+### Answer
 
 In my instance I had the following options to select from:
 
