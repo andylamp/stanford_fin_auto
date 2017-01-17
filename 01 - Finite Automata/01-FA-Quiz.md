@@ -137,6 +137,7 @@ Basis (`|w|` = `0`):
  3. `ε` has an even number of `1`'s because ________
  
     Induction (`|w|` = `n > 0`)
+    
  4. There are two cases: (a) when `w` = `x1` and (b) when `w` = `x0` because ________
 
     Case (a)
@@ -148,7 +149,7 @@ Basis (`|w|` = `0`):
  7. In case (a), `δ(A,w)` = `B` if and only if `w` has an odd number 
  of `1`'s because ________
 
-Case (b):
+    Case (b):
 
  8. In case (b), `w` has an odd number of `1`'s if and only if `x` has an odd number 
  of `1`'s because ________
