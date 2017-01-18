@@ -69,7 +69,56 @@ Convert the following nondeterministic finite automaton:
 
 ![nfa_3][nfa3]
 
+to a DFA, including the dead state, if necessary. Which of the following sets of 
+NFA states is **not** a state of the DFA that is accessible from the start 
+state of the DFA?
+
+## Conversion to DFA
+
+First of all we have to create the transition table for the given NFA, which is shown
+below.
+
+|      |   0  |  1   |
+|:----:|:----:|:----:|
+| → A  |   A  |  B   |
+|  B   | {A, C} |  ∅  |
+| * C   |   ∅   |  {A, B}  |
+
+Then we have to *map* the *ambiguous* NFA states to their equivalent DFA states. 
+For example, in our NFA `C` is an *ambiguous* state as for `1` it has two routes
+instead of one. This is done using the "lazy" initialization which creates 
+additional states on an "as needed" basis. For example, `B` state has two 
+routes for `0` in our given NFA, thus in order to satisfy that constraint we
+will have to create an additional state in our DFA called `{A, C}` that handles
+both routes in one state. Then this state would be evaluated for their paths until
+there are no more states left. The final transition/state table for our DFA is given
+below.
+
+
+|      |   0  |  1   |
+|:----:|:----:|:----:|
+|   → A   |    A   |     B    |
+|     B   | {A, C} |     ∅    |
+| * {A, C}|    A   |  {A, B}  |
+|  {A, B} | {A, C} |     B    |
+
+The DFA equivalent, if drawn, looks like this (higher 
+res pdf: [here](images/tex_src/q3_dfa/q3_dfa.pdf)):
+
+![nfa_3_dfa][nfa3_dfa]
+
 ## Answer
+
+The given options were the following:
+
+ 1. {A, B, C}
+ 2. {}
+ 3. {A, B}
+ 4. {A}
+ 
+The only state that does not exist in our given DFA is the one in **option 1**: {A, B, C}, 
+which is the correct answer
+
 
 # Question 4
 
@@ -163,5 +212,6 @@ Basis (`|w|` = `0`):
 
 [dfa1]: images/dfa1.gif
 [nfa3]: images/nfa3.gif
+[nfa3_dfa]: images/nfa3_dfa.png
 [nfa4]: images/nfa4.gif
 [enfa1]: images/enfa1.gif
