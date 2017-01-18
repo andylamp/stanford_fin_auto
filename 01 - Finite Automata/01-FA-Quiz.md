@@ -61,7 +61,43 @@ Note: the recurrence does not have an easy-to-use closed form, so you will have 
 compute the first few values by hand. You do not have to compute `N(k)` for any `k` 
 greater than `14`.
 
+## Recursion explanation
+
+As described in the question the recursion in question does not have a nice, well 
+formed closed form; this mean that the first few values have to be calculated beforehand.
+
+We can easily from the automaton drawing that it does not accept any string *less* than 
+two characters. Moreover it can only accept *two* distinct 2-character strings altogether: 
+`01`, `10`. We can also easily see that from those two strings there are two paths 
+states that we can take from each one; `1` takes us to state `B` and `0` takes us back
+where we started. Additionally, we can see that from `D` we only need `11` to go back,
+using `D` - 1 → `B` - 1 → `D`; thus for every string of length k-2 that ends up in `D`
+we need `11` to return back to it. Interestingly, we can also see, in a similar fashion
+as before that the same thing happens for strings that end in `D` that are of k-3 length.
+These strings can be go back to state `D` using two distinct paths: `010` and `001`. So
+the recursion has the following formula:
+
+```
+n(k):
+    if k < 2
+        return 0
+    else if k == 2
+        return 2
+    else
+        return n(k-2) + 2*n(k-3)
+```
+
 ## Answer
+
+Thus the answer would be to run the provided python script provided [here](code/01-FA-q2solver.py).
+Just for reference my provided options were:
+
+ 1. N(14) = 280
+ 2. N(13) = 16
+ 3. N(13) = 84
+ 4. N(11) = 682
+
+You can run the script to find that the correct answer in this instance is **option 3**: N(13) = 84.
 
 # Question 3
 
