@@ -1,4 +1,4 @@
-# Week 1 Quiz
+# Week 1, Finite Automata Quiz
 
 # Question 1
 
@@ -13,7 +13,7 @@ In my instance I had the following choices:
  3. `1011011`
  4. `011`
 
-## Answer
+## Option Evaluation
 
 In order to answer this question we have to *follow* each one of given strings along the valid automaton paths;
 if the string is consumed and leaves the automaton in an *ending* state then it is accepted otherwise it is
@@ -43,7 +43,9 @@ Finally, the four and final option:
  
  `A` → `B` → `D` → `B`, which is not an end state, so the automaton halts.
  
-This given the above analysis the correct answer to our question is option **2**: `01010`.
+## Answer 
+ 
+Thus, given the above evaluation the correct answer to our question is option **2**: `01010`.
 
 # Question 2
 
