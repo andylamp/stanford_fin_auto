@@ -268,13 +268,13 @@ Basis (`|w|` = `0`):
 
     Case (b):
 
-8. In case (b), `w` has an odd number of `1`'s if and only if `x` has an odd number 
+ 8. In case (b), `w` has an odd number of `1`'s if and only if `x` has an odd number 
  of `1`'s because ________
 
-9. In case (b), `δ(A,x)` = `B` if and only if `w` has an odd number 
+ 9. In case (b), `δ(A,x)` = `B` if and only if `w` has an odd number 
  of `1`'s because ________
 
-10. In case (b), `δ(A,w)` = `B` if and only if `w` has an odd number of `1`'s because ________
+ 10. In case (b), `δ(A,w)` = `B` if and only if `w` has an odd number of `1`'s because ________
 
 ## Answer
 
