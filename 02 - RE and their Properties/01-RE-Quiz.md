@@ -1,4 +1,4 @@
-# Week 2, Quiz 1: Regular Expressions
+# Week 2, Quiz 1, Regular Expressions
 
 # Question 1
 
@@ -48,15 +48,15 @@ Then, use your knowledge to classify the following languages:
 
 # Question 3
 
-Converting a DFA such as the one above to a regular expression requires us to develop 
+Converting a DFA such as the one below to a regular expression requires us to develop 
 regular expressions for limited sets of paths --- those that take the automaton from 
 one particular state to another particular state, without passing through some set of states. 
 For the automaton given below, determine the languages for the following limitations:
 
- * LAA = the set of path labels that go from `A` to `A` without passing through `C` or `D`.
- * LAB = the set of path labels that go from `A` to `B` without passing through `C` or `D`.
- * LBA = the set of path labels that go from `B` to `A` without passing through `C` or `D`.
- * LBB = the set of path labels that go from `B` to `B` without passing through `C` or `D`.
+ 1. L<sub>AA</sub> = the set of path labels that go from `A` to `A` without passing through `C` or `D`.
+ 2. L<sub>AB</sub> = the set of path labels that go from `A` to `B` without passing through `C` or `D`.
+ 3. L<sub>BA</sub> = the set of path labels that go from `B` to `A` without passing through `C` or `D`.
+ 4. L<sub>BB</sub> = the set of path labels that go from `B` to `B` without passing through `C` or `D`.
 
 Automaton:
 
@@ -69,6 +69,15 @@ regular expression `1` is the set of path labels that go from `A` to `B` without
 through any of the four states.
 
 ## Answer
+
+In my instance I had to select from the following options:
+
+ 1. L<sub>BA</sub> = (01+0)<sup>*</sup>
+ 2. L<sub>AB</sub> = 0<sup>*</sup>1(01+10)<sup>*</sup>
+ 3. L<sub>BB</sub> = (0<sup>*</sup>1)<sup>*</sup>
+ 4. L<sub>BB</sub> =  (00<sup>*</sup>1)<sup>*</sup>
+
+Given the above languages, the correct answer that satisfies the given requirement is **option 4**: 
 
 # Question 4
 
