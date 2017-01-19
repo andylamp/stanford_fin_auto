@@ -1,4 +1,4 @@
-# Week 5, Quiz 2
+# Week 5, Quiz 2, Undecidability Quiz
  
 ## Question 1
 

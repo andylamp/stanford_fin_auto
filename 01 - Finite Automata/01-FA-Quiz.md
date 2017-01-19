@@ -1,4 +1,4 @@
-# Week 1, Finite Automata Quiz
+# Week 1, Quiz 1, Finite Automata Quiz
 
 # Question 1
 

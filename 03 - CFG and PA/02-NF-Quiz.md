@@ -1,4 +1,4 @@
-# Week 3, Quiz 2
+# Week 3, Quiz 2, Normal Forms
 
 ## Question 1
 
