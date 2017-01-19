@@ -73,9 +73,9 @@ through any of the four states.
 In my instance I had to select from the following options:
 
  1. L<sub>BA</sub> = (01+0)<sup>*</sup>
- 2. L<sub>AB</sub> = 0<sup>*</sup>1(01+10)<sup>*</sup>
- 3. L<sub>BB</sub> = (0<sup>*</sup>1)<sup>*</sup>
- 4. L<sub>BB</sub> =  (00<sup>*</sup>1)<sup>*</sup>
+ 2. L<sub>AB</sub> = 0<sup>\*</sup>1(01+10)<sup>\*</sup>
+ 3. L<sub>BB</sub> = (0<sup>\*</sup>1)<sup>\*</sup>
+ 4. L<sub>BB</sub> =  (00<sup>\*</sup>1)<sup>\*</sup>
 
 Given the above languages, the correct answer that satisfies the given requirement is **option 4**: 
 
