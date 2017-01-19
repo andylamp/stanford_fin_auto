@@ -6,6 +6,26 @@ Which of the following strings is NOT in the Kleene closure of the language `L =
 
 ## Answer
 
+ 1. `10011101`
+ 2. `011011110`
+ 3. `01110011`
+ 4. `11001110`
+ 
+Well, in order to find that we have to evaluate each option; remember that for a string to be
+in the Kleene star of a language it has to be comprised out of multiples of each contents, that is
+we *must* be able to break the string down to multiples of the language alphabet; for example
+the string `01110` *is* in the Kleene star of `L` because it's comprised out of 1 x `011` and 
+1 x `10`. Now from the given strings above the only string that we **cannot** break up into
+multiples of `L` basic constructs is the one from **option 1**: `10011101`
+
+Let us examine why this is the case, fist of all the string can be matched initially using 
+only `10`, then we are left with `011101`. This we can match using again only one 
+construct `011`, and we are left with `101`. Then we can match again `10` and we are 
+left with a single `1` character that we cannot match, as `L` does not have a single `1` in 
+its set of constructs.
+
+Thus the correct answer is **option 1**: `10011101`
+
 # Question 2
 
 This DFA shown below accepts a certain language `L`. In this problem we shall consider certain 
