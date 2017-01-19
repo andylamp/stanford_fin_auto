@@ -166,7 +166,37 @@ Convert this NFA to a DFA, using the **lazy** version of the subset construction
 Which of the following sets of NFA states becomes a state of the DFA 
 constructed in this manner?
 
+## NFA to DFA
+
+Similar to the previous question will first create the transition table of the 
+given NFA as is shown below.
+
+|             |     0     |     1    |
+|:-----------:|:---------:|:--------:|
+|     → A     |  {A, B}   |     C    |
+|    {A, B}   |  {A, B}   |  {C, D}  |
+|    {C, D}   | {A, B, D} |     D    |
+| * {A, B, D} |  {A, B}   |  {C, D}  |
+|      B      |     ∅     |  {C, D}  |
+|    * D      |     A     |     D    |
+|      C      |  {B, D}   |     D    |
+| * {B, D}    |     A     |  {C, D}  |
+  
+The DFA equivalent, if drawn, looks like this (higher 
+res pdf: [here](images/tex_src/q4_dfa/q4_dfa.pdf)):
+
+![nfa_4_dfa][nfa4_dfa]
+
 ## Answer
+
+This given the above, my options to select the correct answer from were the following:
+
+ 1. {A, D}
+ 2. {B}
+ 3. {B, C, D}
+ 4. {A, B, D}
+ 
+Clearly, we correct answer is **option 4**: {A, B, D}
 
 # Question 5
 
@@ -249,5 +279,6 @@ Basis (`|w|` = `0`):
 [dfa1]: images/dfa1.gif
 [nfa3]: images/nfa3.gif
 [nfa3_dfa]: images/nfa3_dfa.png
+[nfa4_dfa]: images/nfa4_dfa.png
 [nfa4]: images/nfa4.gif
 [enfa1]: images/enfa1.gif
