@@ -249,34 +249,43 @@ e.g., that every string is longer than any of its proper substrings.
 
 Basis (`|w|` = `0`):
 
- 1. `w` = `ε` because ________
- 2. `δ(A,ε)` = `A` because ________
- 3. `ε` has an even number of `1`'s because ________
+ 1. `w` = `ε` because (C)
+ 2. `δ(A,ε)` = `A` because (B)
+ 3. `ε` has an even number of `1`'s because (C)
  
     Induction (`|w|` = `n > 0`)
     
- 4. There are two cases: (a) when `w` = `x1` and (b) when `w` = `x0` because ________
+ 4. There are two cases: (a) when `w` = `x1` and (b) when `w` = `x0` because (C)
 
     Case (a)
     
  5. In case (a), `w` has an odd number of `1`'s if and 
- only if `x` has an even number of `1`'s because ________
+ only if `x` has an even number of `1`'s because (C)
  6. In case (a), `δ(A,x)` = `A` if and only if `w` has an odd number 
- of `1`'s because ________
+ of `1`'s because (A)
  7. In case (a), `δ(A,w)` = `B` if and only if `w` has an odd number 
- of `1`'s because ________
+ of `1`'s because (B)
 
     Case (b):
 
  8. In case (b), `w` has an odd number of `1`'s if and only if `x` has an odd number 
- of `1`'s because ________
+ of `1`'s because (C)
 
  9. In case (b), `δ(A,x)` = `B` if and only if `w` has an odd number 
- of `1`'s because ________
+ of `1`'s because (A)
 
- 10. In case (b), `δ(A,w)` = `B` if and only if `w` has an odd number of `1`'s because ________
+ 10. In case (b), `δ(A,w)` = `B` if and only if `w` has an odd number of `1`'s because (C)
 
 ## Answer
+
+In my instance I had the following options:
+
+ 1. (2) for reason (B)
+ 2. (5) for reason (A)
+ 3. (6) for reason (C)
+ 4. (10) for reason (C)
+ 
+Judging from the above, we can clearly see that the correct answer is **option 1**: (2) for reason (B).
 
 [dfa1]: images/dfa1.gif
 [nfa3]: images/nfa3.gif
