@@ -322,5 +322,6 @@ Judging from the above, we can clearly see that the correct answer is **option 1
 [nfa3]: images/nfa3.gif
 [nfa3_dfa]: images/nfa3_dfa.png
 [nfa4_dfa]: images/nfa4_dfa.png
+[nfa5_dfa]: images/nfa5_dfa.png
 [nfa4]: images/nfa4.gif
 [enfa1]: images/enfa1.gif
