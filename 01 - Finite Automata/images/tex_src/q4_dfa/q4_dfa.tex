@@ -13,7 +13,7 @@
 	\node[state]                        (B) [right of=A] {$\{A,B\}$};
 	\node[state]                        (C) [right of=B] {$\{C\}$};
 	\node[state,accepting]        (D) [below of=B] {$\{A,B, D\}$};
-	\node[state]						(E) [below of=A] {$\{C, D\}$};
+	\node[state,accepting]  	  (E) [below of=A] {$\{C, D\}$};
 	\node[state,accepting]    	  (G) [below of=E] {$\{D\}$};
 	\node[state,accepting]		  (F) [below of=G] {$\{B, D\}$};
 		
