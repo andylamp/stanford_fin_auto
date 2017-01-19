@@ -215,7 +215,38 @@ that are constructed in this way, we have the DFA and its transitions. Carry out
 this construction of a DFA, and identify one of the states of this DFA (as a 
 subset of the epsilon-NFA's states) from the list below.
 
+## ε-NFA to DFA
+
+In order to convert an ε-NFA to a regular NFA we have to remove the ambiguity that
+is introduced by the shadow ε-jumps (called also as *nop-states*).
+
+First of all we will have to find all of the *closures* of the nop-states; after
+doing that we are left with basically three cases, as you can see we only have
+two ways using `0` which are `0` and `00`. Likewise, we only have two ways 
+getting to `N` using `1`, which are `1` and `10`. Finally we can see that
+we can use a nop-jump to go from the start state directly to `N`. After
+calculating all of the closures we are left with three *distinct* states
+for our DFA, these are the following:
+
+ 1. ABCDHIJKMN
+ 2. BCDEGHIJKLMN
+ 3. BCDFGHIJKMN
+ 
+Thus the DFA equivalent, if drawn, looks like this (higher 
+res pdf: [here](images/tex_src/q5_dfa/q5_dfa.pdf)):
+
+![nfa_5_dfa][nfa5_dfa]
+
 ## Answer
+
+This given the above, my options to select the correct answer from were the following:
+
+ 1. ABCD
+ 2. BCDFGHIJKMN
+ 3. ABCDEFGHIJKLMN
+ 4. IJKMN
+ 
+Clearly, we correct answer is **option 2*: BCDFGHIJKMN
 
 # Question 6
 
