@@ -72,7 +72,7 @@ through any of the four states.
 
 In my instance I had to select from the following options:
 
- 1. L<sub>BA</sub> = (01+0)<sup>*</sup>
+ 1. L<sub>BA</sub> = (01+0)<sup>\*</sup>
  2. L<sub>AB</sub> = 0<sup>\*</sup>1(01+10)<sup>\*</sup>
  3. L<sub>BB</sub> = (0<sup>\*</sup>1)<sup>\*</sup>
  4. L<sub>BB</sub> =  (00<sup>\*</sup>1)<sup>\*</sup>
@@ -85,6 +85,14 @@ Identify from the list below the regular expression that generates all and only 
 strings over alphabet `{0,1}` that end in `1`.
 
 ## Answer
+
+Let us examine our given options one by one, in my case I had the following 
+regular expressions to choose from:
+
+ 1. (0<sup>\*</sup>1<sup>\+</sup>)<sup>\+</sup>
+ 2. (0<sup>\*</sup>+1)<sup>\*</sup>
+ 3. (0<sup>\*</sup>1)<sup>\*</sup>
+ 4. (00+01+10+11)<sup>\*</sup>1
 
 # Question 5
 
