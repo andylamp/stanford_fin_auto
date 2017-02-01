@@ -165,7 +165,7 @@ We can also have any number of them, which is shown again below:
 
  * (01)<sup>\*</sup>
 
-This means that for each `1` there must be a `0` *before* it. Incidentally if we are in state `A`, which we go 
+This means that for each `1` there must be a `0` *before* it. Incidentally, if we are in state `A`, which we go 
 if we have a `0` from `B` we can have an arbitrary number of `0`'s until we have the next `1` to advance to `B`, so
 in order to reflect this our new regular expression is the following:
 
