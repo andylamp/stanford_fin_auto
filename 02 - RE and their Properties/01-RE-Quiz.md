@@ -57,46 +57,46 @@ examine each one of them, first of is: `1111001`
 We can also easily see that this language does not take the automaton from state `D` to `D`, 
 thus this language is **disjoint** from `L`. Let's now examine the second option: `11011`:
 
- S  → `1` → `1` → `0` → `1` → `1`
+ * S  → `1` → `1` → `0` → `1` → `1`
  
-`A` → `B` → `C` → `B` → `C` → `D`, accepts as `D` is an accepting state.
+ * `A` → `B` → `C` → `B` → `C` → `D`, accepts as `D` is an accepting state.
 
 Now we have to check if the automaton takes us from `D` to `D`:
 
- S  → `1` → `1` → `0` → `1` → `1`
+ * S  → `1` → `1` → `0` → `1` → `1`
  
-`D` → `D` → `D` → `C` → `D` → `D`, accepts as `D` is an accepting state.
+ * `D` → `D` → `D` → `C` → `D` → `D`, accepts as `D` is an accepting state.
 
 Thus this language is **contained** in `L` as it both takes the automaton to an accepting state
 from `A` → `D` and from `D` → `D`. Let's now move on to examine the 
 third option: `110101`:
 
- S  → `1` → `1` → `0` → `1` → `0` → `1`
+ * S  → `1` → `1` → `0` → `1` → `0` → `1`
  
-`A` → `B` → `C` → `B` → `C` → `D` → `C`, halts as `C` is not an accepting state.
+ * `A` → `B` → `C` → `B` → `C` → `D` → `C`, halts as `C` is not an accepting state.
 
 We can easily see that that `L(110101)` is **not** contained in `L`, but if the
 automaton starts from state `D` and follows the string `110101` it still ends up
 in `D` as is shown below:
 
- S  → `1` → `1` → `0` → `1` → `0` → `1`
+ * S  → `1` → `1` → `0` → `1` → `0` → `1`
  
-`D` → `D` → `D` → `C` → `D` → `C` → `D`, accepts as `D` is an accepting state.
+ * `D` → `D` → `D` → `C` → `D` → `C` → `D`, accepts as `D` is an accepting state.
 
 
 This means that this language is **not** contained in `L` but is not 
 disjoint to `L`. This basically means that a *portion* of that language is contained 
 in `L` but not **all**. Let's now examine the last option `00011101`:
 
- S  → `0` → `0` → `0` → `1` → `1` → `1` → `0` → `1`
+ * S  → `0` → `0` → `0` → `1` → `1` → `1` → `0` → `1`
  
-`A` → `A` → `A` → `A` → `B` → `C` → `D` → `C` → `D`, accepts as `D` is an accepting state.
+ * `A` → `A` → `A` → `A` → `B` → `C` → `D` → `C` → `D`, accepts as `D` is an accepting state.
 
 Now we have to examine if we can reach `D` starting from `D`:
 
- S  → `0` → `0` → `0` → `1` → `1` → `1` → `0` → `1`
+ * S  → `0` → `0` → `0` → `1` → `1` → `1` → `0` → `1`
  
-`D` → `C` → `B` → `A` → `B` → `C` → `D` → `C` → `D`, accepts as `D` is an accepting state.
+ * `D` → `C` → `B` → `A` → `B` → `C` → `D` → `C` → `D`, accepts as `D` is an accepting state.
 
 Thus we can see that `L(00011101)` is contained in `L`. Finally, given the above 
 information we can summarize the given languages as follows:
