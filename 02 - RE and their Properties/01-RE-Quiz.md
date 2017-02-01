@@ -148,7 +148,30 @@ In my instance I had to select from the following options:
  3. L<sub>BB</sub> = (0<sup>\*</sup>1)<sup>\*</sup>
  4. L<sub>BB</sub> =  (00<sup>\*</sup>1)<sup>\*</sup>
 
-Given the above languages, the correct answer that satisfies the given requirement is **option 4**: 
+Like in the previous question, we have to calculate a regular expression that represents the 
+paths in question. Thankfully, the construction principles are the same as before, 
+hence after evaluation we can see that the only valid regular expression representing
+the given ones is **option 4**: L<sub>BB</sub> =  (00<sup>\*</sup>1)<sup>\*</sup>.
+
+This is because in order to represent *all* paths that go from state `B` to `B` and **do not** 
+pass through `C` or `D` are (00<sup>\*</sup>1)<sup>\*</sup>. This is because, if we are in state
+`B` the only way to move forward is to have `1` and the only way to go *back* is to have `0`; thus given
+our restrictions we *must always* go back *before* we go forward. This is represented by the following
+regular expression:
+
+ * (01)
+
+We can also have any number of them, which is shown again below:
+
+ * (01)<sup>\*</sup>
+
+This means that for each `1` there must be a `0` *before* it. Incidentally if we are in state `A`, which we go 
+if we have a `0` from `B` we can have an arbitrary number of `0`'s until we have the next `1` to advance to `B`, so
+in order to reflect this our new regular expression is the following:
+
+ * (00<sup>\*</sup>1)<sup>\*</sup>
+ 
+Thus, the correct answer is **option 4**: L<sub>BB</sub> =  (00<sup>\*</sup>1)<sup>\*</sup>.
 
 # Question 4
 
