@@ -50,9 +50,9 @@ The answer to this is quite straightforward, we basically have to see if the str
 argument given to `L()` is contained, disjoint or neither from `L`. To do that, let's
 examine each one of them, first of is: `1111001`
 
- S  → `1` → `1` → `1` → `1` → `0` → `0` → `1`
+ * S  → `1` → `1` → `1` → `1` → `0` → `0` → `1`
  
-`A` → `B` → `C` → `D` → `D` → `C` → `B` → `C`, halts as `C` is not an accepting state.
+ * `A` → `B` → `C` → `D` → `D` → `C` → `B` → `C`, halts as `C` is not an accepting state.
   
 We can also easily see that this language does not take the automaton from state `D` to `D`, 
 thus this language is **disjoint** from `L`. Let's now examine the second option: `11011`:
