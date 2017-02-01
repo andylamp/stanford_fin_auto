@@ -94,6 +94,45 @@ regular expressions to choose from:
  3. (0<sup>\*</sup>1)<sup>\*</sup>
  4. (00+01+10+11)<sup>\*</sup>1
 
+We can easily see that the first expressions is the one that meets all of the
+given requirements, hence it is the correct answer; let's see why this is the case.
+
+To find the correct answer we need to find *all* the strings that end in `1` and 
+are comprised out of `{0, 1}`. We can easily see that in order to construct *any*
+permutation of strings that have `0` or `1`, including the empty string it is 
+sufficient to use the following expressions: 
+
+ * (0+1)<sup>\*</sup>
+ 
+We can easily see that in our case we do **not** want to generate the empty string as
+the minimum string we can accept has to have *at least* one `1`. Thus a regular 
+expression to generate the string that has an arbitrary amount of zeros and ends in
+`1` is the following:
+
+ * (0<sup>\*</sup>1<sup>+</sup>)
+ 
+This holds, as in order the above regular expression to be valid it has to have *zero* or 
+*any* number of `0`'s followed by *at least* one or *more* `1`'s. The final key to 
+the puzzle is to allow *at least* one or *more* of these expressions to be given 
+any at time, which can be easily done by adding `+` as is shown below:
+
+ * (0<sup>\*</sup>1<sup>+</sup>)<sup>+</sup>
+
+The second option, (0<sup>\*</sup>+1)<sup>\*</sup> violates two constraints, first of 
+all the empty string is *allowed*, secondly the accepted string does not 
+necessarily end in `1` as inside the parenthesis we have the `+` sign which means either
+in this case; this would make `0` an acceptable string.
+
+The third option, (0<sup>\*</sup>1)<sup>\*</sup> allows the empty string to be accepted, thus
+it generates more strings...
+
+And finally the fourth option, does not generate all of the required string, as it 
+fails to generate `11` or `01` and others...
+
+Thus given the above, and as we said previously the correct answer is 
+**option 1**: (0<sup>\*</sup>1<sup>\+</sup>)<sup>\+</sup>.
+
+
 # Question 5
 
 Apply the construction given in the video lectures to convert the regular expression 
