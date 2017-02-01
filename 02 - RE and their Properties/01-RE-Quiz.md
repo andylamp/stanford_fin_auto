@@ -46,6 +46,77 @@ Then, use your knowledge to classify the following languages:
 
 ## Answer
 
+The answer to this is quite straightforward, we basically have to see if the string
+argument given to `L()` is contained, disjoint or neither from `L`. To do that, let's
+examine each one of them, first of is: `1111001`
+
+ S  → `1` → `1` → `1` → `1` → `0` → `0` → `1`
+ 
+`A` → `B` → `C` → `D` → `D` → `C` → `B` → `C`, halts as `C` is not an accepting state.
+  
+We can also easily see that this language does not take the automaton from state `D` to `D`, 
+thus this language is **disjoint** from `L`. Let's now examine the second option: `11011`:
+
+ S  → `1` → `1` → `0` → `1` → `1`
+ 
+`A` → `B` → `C` → `B` → `C` → `D`, accepts as `D` is an accepting state.
+
+Now we have to check if the automaton takes us from `D` to `D`:
+
+ S  → `1` → `1` → `0` → `1` → `1`
+ 
+`D` → `D` → `D` → `C` → `D` → `D`, accepts as `D` is an accepting state.
+
+Thus this language is **contained** in `L` as it both takes the automaton to an accepting state
+from `A` → `D` and from `D` → `D`. Let's now move on to examine the 
+third option: `110101`:
+
+ S  → `1` → `1` → `0` → `1` → `0` → `1`
+ 
+`A` → `B` → `C` → `B` → `C` → `D` → `C`, halts as `C` is not an accepting state.
+
+We can easily see that that `L(110101)` is **not** contained in `L`, but if the
+automaton starts from state `D` and follows the string `110101` it still ends up
+in `D` as is shown below:
+
+ S  → `1` → `1` → `0` → `1` → `0` → `1`
+ 
+`D` → `D` → `D` → `C` → `D` → `C` → `D`, accepts as `D` is an accepting state.
+
+
+This means that this language is **not** contained in `L` but is not 
+disjoint to `L`. This basically means that a *portion* of that language is contained 
+in `L` but not **all**. Let's now examine the last option `00011101`:
+
+ S  → `0` → `0` → `0` → `1` → `1` → `1` → `0` → `1`
+ 
+`A` → `A` → `A` → `A` → `B` → `C` → `D` → `C` → `D`, accepts as `D` is an accepting state.
+
+Now we have to examine if we can reach `D` starting from `D`:
+
+ S  → `0` → `0` → `0` → `1` → `1` → `1` → `0` → `1`
+ 
+`D` → `C` → `B` → `A` → `B` → `C` → `D` → `C` → `D`, accepts as `D` is an accepting state.
+
+Thus we can see that `L(00011101)` is contained in `L`. Finally, given the above 
+information we can summarize the given languages as follows:
+
+
+ 1. `L(1111001)`, *is disjoint* from `L`.
+ 2. `L(11011)`, *is  contained* in `L`.
+ 3. `L(110101)`, *is neither disjoint nor contained* in `L`.
+ 4. `L(00011101)`, *is contained* in `L`.
+ 
+In my instance I had the following options:
+
+ 1. `L(1111001)` is disjoint from L.
+ 2. `L(11011)` is disjoint from L.
+ 3. `L(00011101)` is neither disjoint from L nor contained in L.
+ 4. `L(110101)` is contained in L.
+
+Which, given the above findings the only statement that holds true is **option 1**: `L(1111001)` is disjoint from L,
+thus it's the correct answer.
+
 # Question 3
 
 Converting a DFA such as the one below to a regular expression requires us to develop 
@@ -136,7 +207,7 @@ Thus given the above, and as we said previously the correct answer is
 # Question 5
 
 Apply the construction given in the video lectures to convert the regular expression 
-`(0+1)*(0+ε)` to an ε-NFA. Then, identify the true statement about your ε-NFA from 
+(0+1)<sup>*</sup>(0+ε) to an ε-NFA. Then, identify the true statement about your ε-NFA from 
 the list below:
 
 ## Answer
