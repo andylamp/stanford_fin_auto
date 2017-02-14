@@ -247,7 +247,7 @@ As for the arcs, `+` and `*` operators introduce four (4) `ε` arcs each, while 
 one (1) epsilon arc. Thus the number of the `ε`-arcs is *four* times the number of `+`, `*` (`3*4`) plus the two
 arcs introduced by concatenation and `ε`; this brings the total number of `ε`-arcs to fourteen (14).
 
-The resulting ε-nfa is shown below.
+The resulting ε-nfa is shown below (higher res [here][enfa_q6_pdf]).
 
 ![e_nfa_q6][enfa_q6]
 
@@ -266,3 +266,4 @@ From what was previously said the only correct option from the ones given is
 [lec_re]: slides/5_re1.ppt
 [dfa_2]: images/dfa_qz2_q2.gif
 [enfa_q6]: images/enfa_q6.png
+[enfa_q6_pdf]: images/tex_src/q6_re_enfa.pdf
