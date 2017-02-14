@@ -231,8 +231,38 @@ Thus given the above, and as we said previously the correct answer is
 
 Apply the construction given in the video lectures to convert the regular expression 
 (0+1)<sup>*</sup>(0+ε) to an ε-NFA. Then, identify the true statement about your ε-NFA from 
-the list below:
+the list given below.
+
+## Regular-Expression to ε-NFA construction
+
+Recall from the lectures (specifically from the handy slides [here][lec_re]), that the amount of discreet states was
+equal to double the amount of sum of the operands present in the RE plug the respective operators between each
+operand. Concretely, in our case we have the following RE: (0+1)<sup>*</sup>(0+ε), which as we can see 
+has four (4) distinct operands, and four operators, two (2) `+`, one (1) `*`, and one concatenation. We also 
+know from the lectures each operand introduces two states, and that `+` and `*` operators also introduce two 
+states each while the concatenation operator does not introduce one. Hence, the total amount of states we
+have is fourteen (`2*(4+2+1)=2*7=14`).
+
+As for the arcs, `+` and `*` operators introduce four (4) `ε` arcs each, while concatenation and `ε` itself introduce
+one (1) epsilon arc. Thus the number of the `ε`-arcs is *four* times the number of `+`, `*` (`3*4`) plus the two
+arcs introduced by concatenation and `ε`; this brings the total number of `ε`-arcs to fourteen (14).
+
+The resulting ε-nfa is shown below.
+
+![e_nfa_q6][enfa_q6]
 
 ## Answer
 
+In my instance I had the following options to select from:
+
+ 1. There are 12 states with more than one arc in
+ 2. There are 16 states in total
+ 3. There are 2 states with more than one arc in
+ 4. There are 14 ε-arcs in total
+
+From what was previously said the only correct option from the ones given is 
+**option 4**: There are 14 ε-arcs in total.
+
+[lec_re]: slides/5_re1.ppt
 [dfa_2]: images/dfa_qz2_q2.gif
+[enfa_q6]: images/enfa_q6.png
