@@ -238,13 +238,13 @@ the list given below.
 Recall from the lectures (specifically from the handy slides [here][lec_re]), that the amount of discreet states was
 equal to double the amount of sum of the operands present in the RE plug the respective operators between each
 operand. Concretely, in our case we have the following RE: (0+1)<sup>*</sup>(0+ε), which as we can see 
-has four (4) distinct operands, and four operators, two (2) `+`, one (1) `\*`, and one concatenation. We also 
-know from the lectures each operand introduces two states, and that `+` and `\*` operators also introduce two 
+has four (4) distinct operands, and four operators, two (2) `+`, one (1) '\*', and one concatenation. We also 
+know from the lectures each operand introduces two states, and that `+` and '\*' operators also introduce two 
 states each while the concatenation operator does not introduce one. Hence, the total amount of states we
 have is fourteen (`2\*(4+2+1)=2\*7=14`).
 
 As for the arcs, `+` and `\*` operators introduce four (4) `ε` arcs each, while concatenation and `ε` itself introduce
-one (1) epsilon arc. Thus the number of the `ε`-arcs is *four* times the number of `+`, `\*` (`3*4`) plus the two
+one (1) epsilon arc. Thus the number of the `ε`-arcs is *four* times the number of `+`, `*` (`3*4`) plus the two
 arcs introduced by concatenation and `ε`; this brings the total number of `ε`-arcs to fourteen (14).
 
 The resulting ε-nfa is shown below (higher res [here][enfa_q6_pdf]).
