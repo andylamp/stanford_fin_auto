@@ -243,7 +243,7 @@ know from the lectures each operand introduces two states, and that `+` and `*` 
 states each while the concatenation operator does not introduce one. Hence, the total amount of states we
 have is fourteen (`2*(4+2+1)=2*7=14`).
 
-As for the arcs, `+` and `\*` operators introduce four (4) `ε` arcs each, while concatenation and `ε` itself introduce
+As for the arcs, `+` and `*` operators introduce four (4) `ε` arcs each, while concatenation and `ε` itself introduce
 one (1) epsilon arc. Thus the number of the `ε`-arcs is *four* times the number of `+`, `*` (`3*4`) plus the two
 arcs introduced by concatenation and `ε`; this brings the total number of `ε`-arcs to fourteen (14).
 
