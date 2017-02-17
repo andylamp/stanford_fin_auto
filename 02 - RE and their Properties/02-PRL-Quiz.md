@@ -49,3 +49,18 @@ expression or finite automaton)?
 4. `L` = {x | x=(ab<sup>2</sup> c)<sup>n</sup>, n a positive integer}
 
 ## Answer
+
+First of all, recall from the lectures that using the pumping lemma is the easiest solution of proving if a language
+is regular or not... intuitively, in finite automata constraints of type a<sup>k</sup>b<sup>n</sup>c<sup>k</sup>, this
+is well explained in the lectures; first of all this language is not regular, moreover RE's and FA's don't have
+the expressive power to perform this (hence the requirement for CFG's and other constructs). Concretely, we can
+use a RE or an FA to express the language *iff* we don't have any constraints for the "replication" factors of each 
+unique letter, which in our previous example are `a`, `b` and `c` for the letters and `k`, `n` for the replication
+factors. In the above case we can see that we *bind* the number of `a`'s to be *equal* to the number of `c`'s. This
+is **not** enforceable by just using RE's or FA's. Obviously, examples 1 and 3 have no relation in their replication
+factors and the only somewhat interesting case that remains is option 4. In option 4, we can see that we have a 
+potential relation of the operands, but in this case the Kleene star is *outside* and the b factor is fixed; thus
+is can be expressed.
+
+Based on what was previously said the only correct option that **cannot** be expressed by either a regular expression
+of a finite automaton is **option 2**: `L` = {x | x=a<sup>k</sup>b<sup>n</sup>c<sup>k</sup>, n, k positive integers}
