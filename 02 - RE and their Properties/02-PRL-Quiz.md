@@ -2,7 +2,18 @@
 
 # Question 1
 
-Here is the transition table of a DFA:
+Here is the transition table of a DFA (arrow indicate starting states and `*` ending ones):
+
+|         |   `0`   |   `1`   |
+|:-------:|:-------:|:-------:|
+|  → A    |     E   |    D    |
+|  * B    |     A   |    C    |
+|    C    |     G   |    B    |
+|    D    |     E   |    A    |
+|  * E    |     H   |    C    |
+|    F    |     C   |    B    |
+|    G    |     F   |    E    |
+|    H    |     B   |    H    |
 
 Find the minimum-state DFA equivalent to the above. Then, identify in the list below the 
 pair of equivalent states (states that get merged in the minimization process).
