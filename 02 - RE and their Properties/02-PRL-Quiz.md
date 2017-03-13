@@ -2,7 +2,7 @@
 
 # Question 1
 
-Here is the transition table of a DFA (arrow indicate starting states and `*` ending ones):
+Here is the transition table of a DFA (arrow indicates starting states and `*` ending ones):
 
 |         |   `0`   |   `1`   |
 |:-------:|:-------:|:-------:|
@@ -18,7 +18,37 @@ Here is the transition table of a DFA (arrow indicate starting states and `*` en
 Find the minimum-state DFA equivalent to the above. Then, identify in the list below the 
 pair of equivalent states (states that get merged in the minimization process).
 
+## Constructing the distinguishable state table
+
+Recall from the lectures, the way to construct this table is the following. First we have
+to find the end states which in this case are `B` and `E`, which we can deduce that are
+*distinguishable*. Then we have to proceed to find which states transition to an end state
+with one and zero which we put into two separate sets.
+
+
+ * Transition to end states on `0`: {A, D, H}
+ * Transition to end states on `1`: {C, F, G}
+ 
+
+|      |   H   |   G   |   F   |   E   |   D   |   C   |   B   |
+|:----:|:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|  A   |      |   x  |   x  |   x  |   x  |  x   |   x   |
+|  B   |  x   |   x  |   x  |      |   x  |  x   |   _   |
+|  C   |  x   |      |      |   x  |   x  |  _   |   _   |
+|  D   |      |   x  |   x  |   x  |   _  |  _   |   _   |
+|  E   |  x   |   x  |   x  |   _  |   _  |  _   |   _   |
+|  F   |  x   |      |   _  |   _  |   _  |  _   |   _   |
+|  G   |  x   |   _  |   _  |   _  |   _  |  _   |   _   |
+
 ## Answer
+
+In my instance I had the following options:
+
+ 1. A and B
+ 2. D and G
+ 3. A and C
+ 4. B and E
+ 
 
 # Question 2
 
@@ -26,6 +56,25 @@ Let `h` be a homomorphism from the alphabet `{a,b,c}` to `{0,1}`. If `h(a)` = `0
 and `h(c)` = `10`, which of the following strings is in h<sup>-1</sup>(010010)?
 
 ## Answer
+
+Recall that homomorphism is basically a map from a set of characters to another. Concretely in this
+case h<sup>-1</sup>(10) would be equal to `a`.
+
+In my instance I had the following options:
+
+ 1. cbbc
+ 2. baba
+ 3. abcb
+ 4. bcbc
+ 
+Let's examine which is their equivalent by using the properties defined above.
+
+ 1. cbbc → 10 - 0 - 0 - 10 → 100010 which is not correct.
+ 2. baba → 0 - 01 - 0 - 01 → 001001 which, again is not correct.
+ 3. abcb → 01 - 0 - 10 - 0 → 010100 which, one more time is not correct.
+ 4. bcbc → 0 - 10 - 0 - 10 → 010010 which is the *desired* solution.
+ 
+Based on what we said above the correct answer is **option 4**: bcbc.
 
 # Question 3
 
@@ -48,6 +97,13 @@ determine what `DM(L)` is, and tell whether or not it is regular.
 Now, identify the true statement below.
 
 ## Answer
+
+In my instance I had the following options:
+
+ 1. DM(L<sub>3</sub>) is regular; it is the language of regular expression 10(101101)*01.
+ 2. DM(L<sub>2</sub>) is regular; it is the language of regular expression ((0+1)(0+1))*.
+ 3. DM(L<sub>2</sub>) is not regular; it consists of all strings of the form (0+1)<sup>n</sup>00(0+1)<sup>n</sup>.
+ 4. DM(L<sub>2</sub>) is not regular; it consists of all even-length strings with more 0's than 1's.
 
 # Question 4
 
