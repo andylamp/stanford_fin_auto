@@ -104,7 +104,9 @@ consisting of a step and a kind of reason (1, 2, or 3).
  2. `ε` is in `BP` because **3**
 
 Induction: An n-step derivation for some n>1.
- 3. The derivation `S` => `n` `w` is either of the form
+ 
+  3. The derivation `S` => `n` `w` is either of the form
+
 (a) `S` => `SS` => `n-1` `w` or of the form
 (b) `S` => `(S)` => `n-1` `w` because **2**
 Case (a):
