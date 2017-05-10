@@ -105,22 +105,22 @@ consisting of a step and a kind of reason (1, 2, or 3).
 
 Induction: An n-step derivation for some n>1.
  
-  3. The derivation `S` => `n` `w`, because **2**, is either of the form  
-        1. `S` => `SS` => `n-1` `w` or of the form
-        2. `S` => `(S)` => `n-1` `w` 
+  3. The derivation `S` =><sup>n</sup> `w`, because **2**, is either of the form  
+        1. `S` => `SS` =><sup>n-1</sup> `w` or of the form
+        2. `S` => `(S)` =><sup>n-1</sup> `w` 
 
-Case (a):
+Case (i):
 
- 4. `w` = `xy`, for some strings `x` and `y` such that `S` => `p` `x` and `S` => `q` `y`, where `p < n` and `q < n` because **2** 
+ 4. `w` = `xy`, for some strings `x` and `y` such that `S` =><sup>p</sup> `x` and `S` =><sup>q</sup> `y`, where `p < n` and `q < n` because **2** 
  5. `x` is in `BP` because **1**
  6. `y` is in `BP` because **1**
  7. `w` is in `BP` because **3**
 
-Case (b):
+Case (ii):
 
- 8. w = (z) for some string z such that S =>n-1 z because **2**
- 9. z is in BP because **1**
- 10. w is in BP because **3**
+ 8. `w` = `(z)` for some string `z` such that `S` =><sup>n-1</sup> `z` because **2**
+ 9. `z` is in `BP` because **1**
+ 10. `w` is in `BP` because **3**
 
 
 ## Answer
