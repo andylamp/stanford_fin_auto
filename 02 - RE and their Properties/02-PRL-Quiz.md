@@ -28,7 +28,9 @@ with one and zero which we put into two separate sets.
 
  * Transition to end states on `0`: {A, D, H}
  * Transition to end states on `1`: {C, F, G}
- 
+
+ Now using the algorithm presented in the course lectures we construct the
+ table shown below:
 
 |      |   H   |   G   |   F   |   E   |   D   |   C   |   B   |
 |:----:|:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
@@ -49,6 +51,7 @@ In my instance I had the following options:
  3. A and C
  4. B and E
  
+Based on the previously presented table the correct answer is **option 4**: B and E.
 
 # Question 2
 
