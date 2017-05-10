@@ -105,6 +105,15 @@ In my case I had the following options to choose from:
  2. `0002111112`
  3. `00211100211`
  4. `000211132`
+
+Do note that the second rule generates strings in the form is 0<sup>n</sup>21<sup>n</sup>, 
+where `n` can me zero or more. Additionally the third rule zero or more `1`'s, followed by *one* 3 
+and something that the second rule generates. Finally since the initial rule generates *first* 
+something that A does and *then* something that B generates the general form of the strings
+this language rules generate are in the form of: 
+0<sup>n</sup>21<sup>m</sup>30<sup>k</sup>21<sup>k</sup> where 0 ≤ n ≤ m and 0 ≤ k.
+ 
+Based on the formula provided above, the correct answer is **option 4**: `000211132`.
  
 # Question 6
 
