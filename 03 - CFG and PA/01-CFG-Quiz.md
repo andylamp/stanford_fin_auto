@@ -15,6 +15,13 @@ this derivation?
 
 ## Answer
 
+In my case I had the following options to choose from:
+
+ 1. `Aba`
+ 2. `aabAba`
+ 3. `aABbA`
+ 4. `aSB`
+
 # Question 2
 
 Let's now assume that the parse tree given below represents a *leftmost* derivation according to the grammar `G`: 
@@ -29,6 +36,13 @@ Find that *leftmost* derivation. Which of the following is a *correct* left-sent
 
 ## Answer
 
+In my case I had the following options to choose from:
+
+ 1. `aabaB`
+ 2. `aaABBB`
+ 3. `aSba`
+ 4. `aabAba`
+ 
 # Question 3
 
 Suppose the parse tree shown below is a parse tree for some unknown grammar `G`. Which of the following productions 
@@ -38,6 +52,13 @@ is **definitely not** a production of `G`?
 
 ## Answer
 
+In my case I had the following options to choose from:
+
+ 1. `S` → `CB`
+ 2. None of the other choices. 
+ 3. `A` → `b`
+ 4. `B` → `b`
+ 
 # Question 4
 
 Below we have eight simple grammars, each of which generates an infinite language of strings. These strings tend to 
@@ -59,6 +80,13 @@ Then, find, in the list below, the pair of grammars that define the same languag
 
 ## Answer
 
+In my case I had the following options to choose from:
+
+ 1.
+ 2.
+ 3.
+ 4.
+ 
 # Question 5
 
 You are given below a context-free grammar G:
@@ -71,6 +99,13 @@ Which of the following strings is in L(G)?
 
 ## Answer
 
+In my case I had the following options to choose from:
+
+ 1. `00213021`
+ 2. `0002111112`
+ 3. `00211100211`
+ 4. `000211132`
+ 
 # Question 6
 
  Let `G` be the grammar:
