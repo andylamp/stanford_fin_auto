@@ -108,6 +108,7 @@ Induction: An n-step derivation for some n>1.
 (a) `S` => `SS` => `n-1` `w` or of the form
 (b) `S` => `(S)` => `n-1` `w` because **2**
 Case (a):
+
  4. `w` = `xy`, for some strings `x` and `y` such that `S` => `p` `x` and `S` => `q` `y`, where `p < n` and `q < n` because **2** 
  5. `x` is in `BP` because **1**
  6. `y` is in `BP` because **1**
