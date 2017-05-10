@@ -106,8 +106,8 @@ consisting of a step and a kind of reason (1, 2, or 3).
 Induction: An n-step derivation for some n>1.
  
   3. The derivation `S` => `n` `w` is either of the form
-  ⋅⋅1. `S` => `SS` => `n-1` `w` or of the form
-  ⋅⋅2. `S` => `(S)` => `n-1` `w` because **2**
+⋅⋅⋅⋅1. `S` => `SS` => `n-1` `w` or of the form
+⋅⋅⋅⋅2. `S` => `(S)` => `n-1` `w` because **2**
 
 Case (a):
 
