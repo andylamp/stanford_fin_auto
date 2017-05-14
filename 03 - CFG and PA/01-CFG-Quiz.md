@@ -170,6 +170,7 @@ Case (ii):
 
 ## Answer
 
-The above reasons are labeled.
+The above reasons are directly embedded as the proof statements are presented.
+
 
 [ptree]: images/parsetree1g.gif
