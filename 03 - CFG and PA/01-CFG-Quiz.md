@@ -155,7 +155,8 @@ Induction: An n-step derivation for some n>1.
 
 Case (i):
 
- 4. `w` = `xy`, for some strings `x` and `y` such that `S` =><sup>p</sup> `x` and `S` =><sup>q</sup> `y`, where `p < n` and `q < n` because **2** 
+ 4. `w` = `xy`, for some strings `x` and `y` such that `S` =><sup>p</sup> `x` and 
+ `S` =><sup>q</sup> `y`, where `p < n` and `q < n` because **2** 
  5. `x` is in `BP` because **1**
  6. `y` is in `BP` because **1**
  7. `w` is in `BP` because **3**
