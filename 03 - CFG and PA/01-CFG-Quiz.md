@@ -58,6 +58,8 @@ In my case I had the following options to choose from:
  3. `aSba`
  4. `aabAba`
  
+ Obviously we can easily see that the correct answer to this question is **option 1**: `aabaB`.
+ 
 # Question 3
 
 Suppose the parse tree shown below is a parse tree for some unknown grammar `G`. Which of the following productions 
@@ -107,6 +109,7 @@ In my case I had the following options to choose from:
     G1: `S` → `aB`, `B` → `bS`, `B` → `ab`
     
     G2: `S` → `SS`, `S` → `ab`
+    
  3.
     G1: `S` → `abS`, `S` → `ab`
     
