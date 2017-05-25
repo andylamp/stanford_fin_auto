@@ -103,8 +103,20 @@ In my case I had the following options to choose from:
     G2: `S` → `aB`, `B` → `bS`, `B` → `b`
 
  2.
+    
+    G1: `S` → `aB`, `B` → `bS`, `B` → `ab`
+    
+    G2: `S` → `SS`, `S` → `ab`
  3.
+    G1: `S` → `abS`, `S` → `ab`
+    
+    G2: `S` → `aB`, `B` → `bS`, `B` → `ab`
+
  4.
+    
+    G1: `S` → `abS`, `S` → `ab`
+
+    G2: `S` → `SS`, `S` → `ab`
  
 # Question 5
 
