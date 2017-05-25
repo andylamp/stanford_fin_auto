@@ -15,12 +15,22 @@ this derivation?
 
 ## Answer
 
+Recall from the lectures that in order to construct a right-most derivation from a given parse tree, we have to always
+replace the *rightmost non-terminal* symbol. As we know, when a non-terminal is replaced during production the
+introduced symbols correspond to the *children* of node `n`, in order, from the left.
+
+Now if we try to match, using a right-most derivation, the only that is satisfied is `Aba` as such:
+
+`S` → `AB` → `AbA` → `Aba`
+
 In my case I had the following options to choose from:
 
  1. `Aba`
  2. `aabAba`
  3. `aABbA`
  4. `aSB`
+
+Thus, based on what was described previously the correct answer is **option 1**: `Aba`
 
 # Question 2
 
@@ -35,6 +45,11 @@ Let's now assume that the parse tree given below represents a *leftmost* derivat
 Find that *leftmost* derivation. Which of the following is a *correct* left-sentential form in this derivation?
 
 ## Answer
+
+In a similar fashion as above, but from the opposite direction the following derivation holds:
+
+`S` → `AB` → `aSB` → `aABB` → `aabAB` → `aabaB`
+
 
 In my case I had the following options to choose from:
 
@@ -82,7 +97,11 @@ Then, find, in the list below, the pair of grammars that define the same languag
 
 In my case I had the following options to choose from:
 
- 1.
+ 1. 
+    G1: `S` → `aB`, `B` → `bS`, `B` → `a`
+    
+    G2: `S` → `aB`, `B` → `bS`, `B` → `b`
+
  2.
  3.
  4.
