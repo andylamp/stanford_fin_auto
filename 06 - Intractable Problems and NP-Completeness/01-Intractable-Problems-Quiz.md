@@ -38,7 +38,8 @@ In my instance I had the following answers:
  3. L1 ∪ L2 is definitely not in NP.
  4. L1 ∪ L2 is definitely in NP. 
 
-Now let's try to classify each of the provided languages:
+From the aforementioned options the correct one is **option 4**. To provide a more 
+detailed answer let's try to classify each of the provided languages individually.
 
  1. L1 ∪ L2: We know that L1 is in P and L2 is NP-Complete and since P ⊆ NP then
  the union will be definitely in NP since we do not know that P=NP and thus we
