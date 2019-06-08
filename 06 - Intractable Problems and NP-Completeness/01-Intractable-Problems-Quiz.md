@@ -6,7 +6,37 @@
 
 ## Question 2
 
+Suppose there are three languages (i.e., problems), of which we know 
+the following:
+
+ 1. L1 is in P.
+ 2. L2 is NP-complete.
+ 3. L3 is not in NP.
+
+Suppose also that we do not know anything about the resolution of the 
+"P vs. NP" question; for example, we do not know definitely whether P=NP. 
+Classify each of the following languages as (a) Definitely in P, 
+(b) Definitely in NP (but perhaps not in P and perhaps not NP-complete) 
+(c) Definitely NP-complete (d) Definitely not in NP:
+
+ 1. L1 ∪ L2.
+ 2. L1 ∩ L2.
+ 3. L2cL3, where c is a symbol not in the alphabet of L2 or L3 
+ (i.e., the marked concatenation of L2 and L3, where there is a 
+ unique marker symbol between the strings from L2 and L3).
+ 4. The complement of L3.
+
+Based on your analysis, pick the correct, definitely true statement 
+from the list below.
+
 ### Answer
+
+In my instance I had the following answers:
+
+ 1. L1 ∩ L2 is definitely NP-complete.
+ 2. The complement of L3 is definitely not in NP.
+ 3. L1 ∪ L2 is definitely not in NP.
+ 4. L1 ∪ L2 is definitely in NP. 
 
 ## Question 3
 
