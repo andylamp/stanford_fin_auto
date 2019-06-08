@@ -119,8 +119,8 @@ In a similar fashion we can see in option 4 by forming its complement:
 Finally, we form the complement of option 1, which is `{A, E, H, L}` is indeed
 an independent set since none of these nodes are linked and also is the minimal
 cover having a size of 8. Please also do note that the solution is not *unique* 
-and there can be many minimal covers for a given graph (but all will have the
-same length, if they are indeed minimal covers!).
+and there can be a number of valid minimal covers for a given graph 
+(but all will have the *same length*, if they are indeed minimal covers!).
 
 [ind_set]: images/indepSet.gif
 [3sat_vec_cover_small]: images/3sat-cover-small.png
