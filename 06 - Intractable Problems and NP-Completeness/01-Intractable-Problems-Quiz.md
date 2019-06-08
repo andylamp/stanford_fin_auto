@@ -123,8 +123,39 @@ Note: logical OR is represented by `+`, logical AND by juxtaposition, and
 logical NOT by `¬`.
 
 
-
 ### Answer
+
+In my instance I had the following options to select from:
+
+ 1. `(y3+y2+u)`
+ 2. `(u)`
+ 3. `(y2+¬y1+w)`
+ 4. `(y1+v)`
+
+To answer this question we first need to construct the CNF form for our expression, namely: `(u+(vw))+x`. 
+Recall from the lectures that you can easily do this by finding where this expression is false - for our 
+particular example this is the case when using the following assigments:
+
+ 1. `u=0`, `v=0`, `w=0`, `x=0`
+ 2. `u=0`, `v=0`, `w=1`, `x=0`
+ 3. `u=0`, `v=1`, `w=0`, `x=0`
+ 
+This creates the following three 4-clause terms:
+
+```
+ (¬u+¬v+¬w+¬x)(¬u+¬v+w+¬x)(¬u+v+¬w+¬x)
+```
+
+Now, to reduce this 4-sat problem to a 3-sat we can use "stick"-variables for each term, I will only show the
+second term decomposition, as that will also reveal our corresponding answer - but you can easily infer 
+how to do the others as well.
+
+```
+(¬u+¬v+w+¬x) = (¬u+¬v+y1)(w+y2+¬y1)(w+¬x+¬y2)
+```
+
+To decompose 4 terms we need 2 "sticky" variables, namely `y1` & `y2`, and you can see that the correct answer
+given our options is **option 3**.
 
 ## Question 5
 
