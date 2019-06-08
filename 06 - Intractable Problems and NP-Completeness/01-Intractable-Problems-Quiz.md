@@ -2,7 +2,23 @@
  
 ## Question 1
 
+In the following expressions, - represents negation of a variable. For example, 
+`¬x` stands for "NOT x"), + represents logical OR, and juxtaposition represents logical 
+AND (e.g., `(x+y)(y+z)` represents (x OR y) AND (y OR z).
+
+Identify the expression that is satisfiable, from the list below.
+
+ 1. `(¬x+y)(¬x+¬y)(y+z)(x)`
+ 2. `(x+y)(x+¬y)(¬x+y)(¬x+¬y)`
+ 3. `(x)(¬x+¬y)(¬y+z)(¬z+¬x)`
+ 4. `(x+¬y)(x+y)(¬x+¬y)(¬x+y)`
+
 ### Answer
+
+To answer this, the correct way would be to find the independent set of the vertex cover of each problem 
+which in turn will provide the solution. Or, for a hacky and more quick solution you can just solve
+it quickly since the problems are small enough and only hold two variables. In any case, the correct answer is
+**option 3**: `(x)(¬x+¬y)(¬y+z)(¬z+¬x)`.
 
 ## Question 2
 
