@@ -14,6 +14,20 @@
 
 ## Question 4
 
+The polynomial-time reduction from SAT to CSAT, as described in the class videos 
+needs to introduce new variables. The reason is that the obvious manipulation of a 
+boolean expression into an equivalent CNF expression could exponentiate the size of 
+the expression, and therefore could not be polynomial time. Suppose we apply this 
+construction to the expression `(u+(vw))+x`, with the parse implied by the 
+parentheses. Suppose also that when we introduce new variables, we use 
+`y1`, `y2`,... After constructing the corresponding CNF expression, 
+identify one of its clauses from the list below. 
+
+Note: logical OR is represented by `+`, logical AND by juxtaposition, and 
+logical NOT by `¬`.
+
+
+
 ### Answer
 
 ## Question 5
@@ -21,8 +35,8 @@
 ### Part A
 
 The proof that the Node cover problem is NP-complete depends on a construction 
-given in the class videos, which reduces 3SAT to Node Cover. Apply this 
-construction to the 3SAT instance:
+given in the class videos, which reduces 3SAT to Vertex (or Node) Cover. 
+Apply this construction to the 3SAT instance:
 
 ```
 (u+v+w)(¬v+¬w+x)(¬u+¬x+y)(x+¬y+z)(u+¬w+¬z)
@@ -38,7 +52,12 @@ that does NOT have an edge between them.
 
 ### Answer
 
-Let's perform the construction
+Let's perform the construction of the vertex cover the result of which is 
+shown below (higher resultion [here][3sat_vec_cover_pdf])
+
+![e_3sat_vec][3sat_vec_cover_small]
+
+
 
 After performing the construction, identify from the list below the one pair of nodes 
 that does **NOT** have an edge between them.
@@ -99,6 +118,10 @@ In a similar fashion we can see in option 4 by forming its complement:
 
 Finally, we form the complement of option 1, which is `{A, E, H, L}` is indeed
 an independent set since none of these nodes are linked and also is the minimal
-cover having a size of 8.
+cover having a size of 8. Please also do note that the solution is not *unique* 
+and there can be many minimal covers for a given graph (but all will have the
+same length, if they are indeed minimal covers!).
 
 [ind_set]: images/indepSet.gif
+[3sat_vec_cover_small]: images/3sat-cover-small.png
+[3sat_vec_cover_pdf]: pdfs/3sat-cover.pdf
