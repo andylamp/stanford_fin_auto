@@ -35,7 +35,8 @@ In my instance I had the following options to select from:
 Naturally, the only true statement (as per lectures) is that NP is **not**
 closed under homomorphism.
 
-A more detailed breakdown is the following:
+A more detailed breakdown is the following with respect it this is 
+closed or not based on the operation:
 
  1. Union (P: YES, NP: YES).
  2. Intersection (P: YES, NP: YES).
