@@ -10,7 +10,40 @@
 
 ## Question 3
 
+The classes of languages P and NP are closed under certain operations, 
+and not closed under others, just like classes such as the regular languages or 
+context-free languages have closure properties. Decide whether P and NP are 
+closed under each of the following operations.
+
+ 1. Union.
+ 2. Intersection.
+ 3. Intersection with a regular language.
+ 4. Concatenation.
+ 5. Kleene closure (star).
+ 6. Homomorphism.
+ 7. Inverse Homomorphism.
+
 ### Answer
+
+In my instance I had the following options to select from:
+
+ 1. NP is not closed under union.
+ 2. NP is not closed under Kleene closure.
+ 3. P is not closed under intersection with a regular language.
+ 4. NP is not closed under homomorphism.
+ 
+Naturally, the only true statement (as per lectures) is that NP is **not**
+closed under homomorphism.
+
+A more detailed breakdown is the following:
+
+ 1. Union (P: YES, NP: YES).
+ 2. Intersection (P: YES, NP: YES).
+ 3. Intersection with a regular language (P: YES, NP: YES).
+ 4. Concatenation (P: YES, NP: YES).
+ 5. Kleene closure (star) (P: YES, NP: YES).
+ 6. Homomorphism (P: NO, NP: NO).
+ 7. Inverse Homomorphism (P: YES, NP: YES).
 
 ## Question 4
 
