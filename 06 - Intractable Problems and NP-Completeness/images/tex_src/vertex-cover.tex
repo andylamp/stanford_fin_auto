@@ -1,0 +1,85 @@
+\documentclass {article}
+\usepackage {tikz}
+\usetikzlibrary {positioning}
+\begin {document}
+\begin {figure}
+\centering
+\begin {tikzpicture}[-latex,
+    auto,
+    node distance =1.5cm and 1cm,
+    on grid,
+    semithick,
+    state/.style={
+        circle,
+        top color=white,
+        draw,
+        minimum width =1 cm
+    }
+]
+
+% first triplet
+\node[state] (U1) {$u$};
+\node[state] (W1) [below left=of U1] {$w$};
+\node[state] (V1) [below right=of U1] {$v$};
+
+\path [-] (U1) edge node {} (W1);
+\path [-] (V1) edge node {} (W1);
+\path [-] (V1) edge node {} (U1);
+
+% second triplet
+\node[state] (U2) at (4, 0) {$\bar{u}$};
+\node[state] (X2) [below left=of U2] {$\bar{x}$};
+\node[state] (Y2) [below right=of U2] {$y$};
+
+\path [-] (U2) edge node {} (X2);
+\path [-] (U2) edge node {} (Y2);
+\path [-] (X2) edge node {} (Y2);
+
+% third triplet
+\node[state] (X3) at (8, 0) {$x$};
+\node[state] (Y3) [below left=of X3] {$\bar{y}$};
+\node[state] (Z3) [below right=of X3] {$z$};
+
+\path [-] (X3) edge node {} (Y3);
+\path [-] (X3) edge node {} (Z3);
+\path [-] (Y3) edge node {} (Z3);
+
+% fourth triplet
+\node[state] (V4) at (4, -4) {$\bar{v}$};
+\node[state] (X4) [below left=of V4] {$x$};
+\node[state] (W4) [below right=of V4] {$\bar{w}$};
+
+\path [-] (V4) edge node {} (X4);
+\path [-] (V4) edge node {} (W4);
+\path [-] (X4) edge node {} (W4);
+
+% fifth triplet
+\node[state] (W5) at (4, 4) {$\bar{w}$};
+\node[state] (U5) [below left=of W5] {$u$};
+\node[state] (Z5) [below right=of W5] {$\bar{z}$};
+
+\path [-] (W5) edge node {} (U5);
+\path [-] (U5) edge node {} (Z5);
+\path [-] (Z5) edge node {} (W5);
+
+% interlinks
+\path [-] (U1) edge [bend left] node {} (U2);
+\path [-] (U2) edge [bend right] node {} (U5);
+
+\path [-] (X2) edge [bend left = 10] node {} (X3);
+\path [-] (X2) edge [bend right] node {} (X4);
+
+\path [-] (W1) edge [bend left = -80] node {} (W4);
+\path [-] (W1) edge [bend left = 40] node {} (W5);
+
+\path [-] (Z3) edge [bend left] node {} (Z5);
+
+\path [-] (Y2) edge [bend left] node {} (Y3);
+
+\path [-] (V1) edge [bend right] node {} (V4);
+
+\end{tikzpicture}
+\caption{Vertex Cover of 3SAT}
+\end{figure}
+
+\end{document}
