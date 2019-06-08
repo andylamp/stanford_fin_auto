@@ -38,6 +38,23 @@ In my instance I had the following answers:
  3. L1 ∪ L2 is definitely not in NP.
  4. L1 ∪ L2 is definitely in NP. 
 
+Now let's try to classify each of the provided languages:
+
+ 1. L1 ∪ L2: We know that L1 is in P and L2 is NP-Complete and since P ⊆ NP then
+ the union will be definitely in NP since we do not know that P=NP and thus we
+ cannot definitely conclude that either L is either P or NP-complete and thus we
+ take NP (which includes both P and NP-complete).
+ 2. L1 ∩ L2: In the same property as above and since the intersection operation
+ is closed (see Q4 below) then the intersection will be definitely in NP.
+ 3. L2cL3.
+ 4. The complement of L3: Since we only know that L3 is not in NP, then if L3 is in P
+ due to fact that P is closed under complementation hence L will be in P as well.
+ Suppose now that L3 is an undecidable problem (not in NP) but its complement be 
+ decidable but NP-hard - similarly we can construct other problem instances where
+  we do not have a clear cut answer in which class L resides. Thus, with only 
+  knowing that L3 is not in NP we cannot really deduce in which class the complement 
+  of L3 will be.
+
 ## Question 3
 
 The classes of languages P and NP are closed under certain operations, 
