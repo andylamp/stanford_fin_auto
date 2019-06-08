@@ -63,10 +63,8 @@ In my instance I had the following options to select from:
  4. NP is not closed under homomorphism.
  
 Naturally, the only true statement (as per lectures) is that NP is **not**
-closed under homomorphism.
-
-A more detailed breakdown is the following with respect it this is 
-closed or not based on the operation:
+closed under homomorphism. Further, a more detailed breakdown with respect which 
+one is closed or not based on the operation is shown below.
 
  1. Union (P: YES, NP: YES).
  2. Intersection (P: YES, NP: YES).
