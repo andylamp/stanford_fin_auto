@@ -107,6 +107,15 @@ In my instance I had the following options:
  2. DM(L<sub>2</sub>) is regular; it is the language of regular expression ((0+1)(0+1))*.
  3. DM(L<sub>2</sub>) is not regular; it consists of all strings of the form (0+1)<sup>n</sup>00(0+1)<sup>n</sup>.
  4. DM(L<sub>2</sub>) is not regular; it consists of all even-length strings with more 0's than 1's.
+ 
+We can see that DM(L<sub>2</sub>) is regular and it is indeed the language of the regular 
+expression ((0+1)(0+1))*, hence **option 2** is the correct answer. Obviously since 
+**option 2** is correct, then since DM(L<sub>2</sub>) *is* regular options 3 and 4 are discarded. 
+Now, we can easily discard option 1 since we can see that L<sub>3</sub> is `(101)*` thus the
+string `101` is valid for L<sub>3</sub>, but then when we apply `DM()` operator for that string
+we get the empty string, since it is of even length. Then we can easily that the regular expression
+of option 1, `10(101101)*01` has a *minimum* string of `1001`, which means that it cannot accept the
+empty string - hence with this we discard option 1 as well.
 
 # Question 4
 
@@ -120,14 +129,15 @@ expression or finite automaton)?
 
 ## Answer
 
-First of all, recall from the lectures that using the pumping lemma is the easiest solution of proving if a language
-is regular or not... intuitively, in finite automata constraints of type a<sup>k</sup>b<sup>n</sup>c<sup>k</sup>, this
-is well explained in the lectures; first of all this language is not regular, moreover RE's and FA's don't have
-the expressive power to perform this (hence the requirement for CFG's and other constructs). Concretely, we can
-use a RE or an FA to express the language if we don't have any *shared* constraints for the "replication" 
-factors of each unique letter, which in our previous example are `a`, `b` and `c` for the letters and `k`, `n` for 
-the replication factors. In the above case we can see that we *bind* the number of `a`'s to be *equal* to the 
-number of `c`'s. This is **not** enforceable by just using RE's or FA's. Obviously, examples 1 and 3 have no 
+First of all, recall from the lectures that using the pumping lemma is the easiest solution of proving if 
+a language is regular or not... intuitively, in finite automata constraints of type 
+a<sup>k</sup>b<sup>n</sup>c<sup>k</sup>, this is well explained in the lectures; first of all this 
+language is not regular, moreover RE's and FA's don't have the expressive power to perform this (hence 
+the requirement for CFG's and other constructs). Concretely, we can use a RE or an FA to express the 
+language if we don't have any *shared* constraints for the "replication" factors of each unique letter, 
+which in our previous example are `a`, `b` and `c` for the letters and `k`, `n` for the replication 
+factors. In the above case we can see that we *bind* the number of `a`'s to be *equal* to the number of 
+`c`'s. This is **not** enforceable by just using RE's or FA's. Obviously, examples 1 and 3 have no 
 relation in their replication factors and the only somewhat interesting case that remains is option 4. In option 
 4, we can see that we have a potential relation of the operands, but in this case the Kleene star is *outside* and 
 the `b` factor is fixed, equal to two (2); thus is can be expressed.
