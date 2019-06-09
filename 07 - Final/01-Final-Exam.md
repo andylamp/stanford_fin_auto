@@ -78,6 +78,43 @@ The questions in this group refer to the following DFA:
 We suggest you first examine the automaton and determine 
 intuitively what language it accepts.
 
+### Answer
+
+#### Part A
+
+Which of the following strings is NOT accepted by this NFA?
+
+ 1. `00`
+ 2. `10`
+ 3. `110`
+ 4. `0101`
+ 
+We can easily see by plugging each of the solutions to the automaton that the string that is not accepted
+by the NFA is **option 3**.
+
+#### Part B
+
+How many paths labeled 001 are there?
+
+ 1. 1
+ 2. 2
+ 3. 3
+ 4. 4
+ 
+We can easily see that the number of paths `001` is 3 thus the correct answer is **option 3**.
+  
+#### Part C
+
+Which of the following regular expressions DOES NOT generate the same language as the automaton accepts?
+
+ 1. 0*(0+1)0*(0+1)
+ 2. (0+1)(0+1)0* 
+ 3. 0*(0+10*)(0+1)
+ 4. (0+1)00*+00*10*+0*10*1
+ 
+We can easily see from the automaton that the one which fails to even be parsed by it is (0+1)(0+1)0* and thus the
+ correct answer is **option 2**.
+ 
 ## Regular and Context-Free Languages
 
 Classify each of the following languages as either 
@@ -90,13 +127,141 @@ All languages are over the alphabet `{0, 1, 2}`.
 
 ### Answer
 
+#### Part A
+
+The set of strings that, when treated as a base-3 number, is evenly divisible by 7.
+
+ 1. Regular
+ 2. Context-free but not regular
+ 3. Not context free
+
+The correct answer is **option 1** as the language is regular.
+
+#### Part B
+
+The set of strings that, when treated as a base-3 number, is a prime.
+ 
+ 1. Regular
+ 2. Context-free but not regular
+ 3. Not context free 
+
+The correct answer is **option 3** as when applying the pumping lemma we can deduce that 
+the language not context free.
+
+#### Part C
+
+The set of strings with an equal number of 0's, 1's, and 2's.
+
+ 1. Regular
+ 2. Context-free but not regular
+ 3. Not context free
+ 
+The correct answer is **option 3** as when applying the pumping lemma we can see that 
+the language is not context free.
+
+#### Part D
+
+The set of strings with more 0's than 1's (and any number of 2's).
+
+ 1. Regular
+ 2. Context-free but not regular
+ 3. Not context free
+ 
+The correct answer is **option 2** as the language is context-free yet not regular.
+
+#### Part E
+
+The set of strings in which every 0 and every 1 is immediately followed by a 2.
+
+ 1. Regular
+ 2. Context-free but not regular
+ 3. Not context free
+
+The correct answer is **option 1** as the language is indeed regular.
+
 ## Closure Properties
 
+For each of the operations below, check all and only the classes of languages that are closed 
+under that operation. Note: to get credit for a part, you must get ALL the classes for that part correct.
+
 ### Answer
+
+#### Part A
+
+Reversal with respect to the following languages:
+
+ * The regular languages
+ * The context-free languages
+ * The recursive languages
+ * The recursively enumerable languages
+
+The reversal property, as per lectures, is closed for *all* the above languages.
+
+#### Part B
+
+Intersection with respect to the following languages:
+
+ * The regular languages
+ * The context-free languages
+ * The recursive languages
+ * The recursively enumerable languages
+ 
+The intersection property, as per lectures, is closed for regular, recursive, and recursively 
+enumerate languages but **not** for context-free.
+
+#### Part C
+
+he operation that takes each string in the language and deletes all the odd-numbered positions. 
+For example, if L = {0123, 01234, 000000, 11111} then the result of the operation is {13, 000, 11}.
+
+ * The regular languages
+ * The context-free languages
+ 
+This operation, as per lectures, holds only for the regular and **not** for the context free languages.
+
 
 ## Context-Free Grammars
 
+Given the following parse tree T that parses a context-free grammar G - answer the following questions for the
+parse tree T and grammar G.
+
+![e_tree][tree1]
+
 ### Answer
+
+#### Part A
+
+How many interior nodes are in T?
+
+ 1. 2
+ 2. 3
+ 3. 4
+ 4. 5
+ 
+This easily deduced from the parse tree as the number of *interior* nodes are 5, hence the correct answer is
+**option 4**. Recall that an interior node is a non-terminal category of the parsed grammar of which we have 5 in the
+provided tree.
+
+#### Part B
+
+Which of the following strings is DEFINITELY in the language L(G)?
+
+ 1. abab
+ 2. baba
+ 3. baabb
+ 4. ε
+
+
+
+#### Part C
+
+Which of the following sentential forms is NEITHER a sentential form in the leftmost derivation 
+corresponding to T NOR a sentential form in the rightmost derivation corresponding to T?
+
+ 1. baB
+ 2. Baa
+ 3. aAB
+ 4. Aa
 
 ## CYK Algorithm
 
@@ -110,9 +275,24 @@ All languages are over the alphabet `{0, 1, 2}`.
 
 ### Answer
 
-## Rice's Theorem
+## Turing Machines
 
 ### Answer
+
+## Rice's Theorem
+
+Check all and only those of the following languages that are recursive (decidable).
+
+ 1. The set of Turing-machine codes for Turing machines with more states than tape symbols
+ 2. The set of Turing-machine codes for Turing machines that accept all strings over their input alphabet
+ 3. The set of Turing machine codes for Turing machines that both accept and reject the same input.
+
+### Answer
+
+From the lectures, we know that the only two of the above that are are decidable - namely:
+
+ * The set of Turing-machine codes for Turing machines with more states than tape symbols
+ * The set of Turing machine codes for Turing machines that both accept and reject the same input.
 
 ## Polynomial-Time Reductions
 
@@ -124,11 +304,62 @@ All languages are over the alphabet `{0, 1, 2}`.
 
 ## Satisfiability
 
+The following expression: `(x + y)(¬x + ¬z)` is in SAT. (Note: `¬` stands for logical negation.)
+
+How many satisfying assignments does this expression have?
+
 ### Answer
+
+This has 4 individual satisfying assignments, namely:
+
+ * x = 1, y = 0, z = 0
+ * x = 1, y = 1, z = 0
+ * x = 0, y = 1, z = 0
+ * x = 0, y = 1, z = 1
+ 
 
 ## Intractable Problems
 
+For the purpose of this question, assume it is known that P is not equal to NP, but NP is equal to co-NP.
+For each problem below, check all and only the classes to which the problem would then be known to belong.
+
 ### Answer
+
+#### Part A
+
+2SAT (given a Boolean expression that is the AND of factors, each factor being the OR of two literals, 
+is this expression satisfiable?):
+
+ 1. P 
+ 2. NP
+ 3. co-NP
+
+As per lectures this would be in all of the above, namely: P, NP, and co-NP.
+
+#### Part B
+
+The Tautology problem (given a Boolean expression, is it true for all possible truth assignments?):
+
+ 1. P
+ 2. NP
+ 3. co-NP
+ 
+As per lectures this would be in NP and co-NP - concretely since it is known that the boolean satisfiability
+problem to be NP complete then consequently the tautology problem is in NP and specifically co-NP 
+(check [here][tauto]).
+
+#### Part C
+
+The 3-Knapsack problem (given a set of integers, can it be partitioned into THREE disjoint sets such 
+that the sum of the members of each set is the same?):
+
+ 1. P
+ 2. NP
+ 3. co-NP
+ 
+As per lectures, we can easily see that this problem is in NP and co-NP 
 
 [dfa1]: images/dfa1.gif
 [nfa1]: images/nfa1.gif
+[tree1]: images/parsetree.gif
+[tauto]: https://en.wikipedia.org/wiki/Tautology_(logic)
