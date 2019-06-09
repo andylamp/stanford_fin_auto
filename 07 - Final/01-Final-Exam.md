@@ -251,7 +251,15 @@ Which of the following strings is DEFINITELY in the language L(G)?
  3. baabb
  4. ε
 
+We can easily see that the correct answer is **option 1**, but before we validate it let's create the transition
+rules for the tree T and grammar G:
 
+ * S → AB
+ * A → BA | a
+ * B → b | a
+ 
+Now let's us expand **option 1**: S → AB → BAB → aBAB → abAB → abaB → abab which is our answer. In our derivation
+we assume that in this instance we use left-most expansion.
 
 #### Part C
 
@@ -262,6 +270,13 @@ corresponding to T NOR a sentential form in the rightmost derivation correspondi
  2. Baa
  3. aAB
  4. Aa
+ 
+Recall than sentential form is any string that can be derived from the start symbol which includes the non-terminals
+that happen in intermediate steps as well. There are *left* and *right* sentential forms which are used in leftmost and
+rightmost derivations respectively.
+
+Based on the above definition of sentential forms we can easily see that `aAB` is neither a sentential form 
+in leftmost and rightmost derivations with respect to T.
 
 ## CYK Algorithm
 
@@ -273,7 +288,30 @@ corresponding to T NOR a sentential form in the rightmost derivation correspondi
 
 ## Homomorphisms
 
+Let h be the homomorphism defined by 
+
+ * h(a) = 01 and 
+ * h(b) = 1. 
+ 
+Now let L1 = h({aba, bab}), that is, h applied to the language consisting of two strings, aba and bab.
+
+Also let L2 = h<sup>-1</sup>({010, 101}).
+
 ### Answer
+
+#### Part A
+
+How many string are in L1?
+
+We can easily see that there are only two (2) strings in L1 - this is because both strings can be mapped to L1
+using h, which results into two strings; namely: h(aba) → 01101, h(bab) → 1011
+
+#### Part B
+
+How many strings are in L2?
+
+And in a similar fashion we can see that there is only one (1) string in L2. In this instance only one string can be
+mapped to L2 using h<sup>-1</sup>, namely: h<sup>-1</sup>(101) → ba as 01101 cannot be mapped using h<sup>-1</sup>.
 
 ## Turing Machines
 
@@ -296,11 +334,46 @@ From the lectures, we know that the only two of the above that are are decidable
 
 ## Polynomial-Time Reductions
 
+In the following, we use comp(L) to represent the complement of the language L. We are given the following facts:
+
+ 1. There is a polynomial-time reduction of L1 to L2.
+ 2. There is a polynomial-time reduction of comp(L2) to L3
+ 3. L3 is in NP.
+
+Given what we know about the relationships among P, NP, and co-NP, which of the following is DEFINITELY true?
+
 ### Answer
+
+In my instance I had the following options to select from:
+
+ 1. L2 is in NP.
+ 2. comp(L2) is in co-NP.
+ 3. L1 is not in P.
+ 4. comp(L1) is in NP.
+
+Out of the options provided only **option 4** is correct since we know that L3 is in NP. We also know that languages
+are closed with respect to complementation under P but we do not know if that holds under NP. Since there is a 
+polynomial-time reduction from comp(L2) to L3 we know that comp(L2) will be in NP. Thus, although we do not know
+if L1 or L2 are indeed in NP due to the polynomial reduction of comp(L2) to L3 we can infer that comp(L1) will be 
+in NP as well.
 
 ## Post's Correspondence Problem (PSP)
 
+Given the following instance of the Post's Correspondence Problem (PSP)
+
+| List A 	| List B 	|
+|--------	|--------	|
+| 011    	| 01     	|
+| 110    	| 10     	|
+| 01     	| 1011   	|
+
+What is the length of the shortest solution to this instance of PCP? 
+
+Note: we are asking for the number of occurrences of pairs, not the length of the string that is 
+formed by concatenating the first or second components of the pairs.
+
 ### Answer
+
 
 ## Satisfiability
 
