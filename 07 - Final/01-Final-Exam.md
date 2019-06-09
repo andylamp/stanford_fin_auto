@@ -374,6 +374,14 @@ formed by concatenating the first or second components of the pairs.
 
 ### Answer
 
+The correct answer is 3 - that is, we use each block of each list *once*; an example solution that uses
+each block once is shown below
+
+|        |  0 |   1  |  3  |
+|:------:|:--:|:----:|:---:|
+| List A | 01 |  011 | 110 |
+| List B | 01 | 0111 |  10 |
+
 
 ## Satisfiability
 
