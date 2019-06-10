@@ -52,9 +52,9 @@ Which of the following regular expressions takes the automaton from state `A` to
 without passing through state `C`?
 
  1. 0<sup>*</sup>1
- 2. 0<sup>*</sup>(0+1)0<sup>*</sup>
- 3. 0<sup>*</sup>10<sup>*</sup>
- 4. 0<sup>*</sup>1<sup>*</sup>0<sup>*</sup>
+ 2. 0<sup>&ast;</sup>(0+1)0<sup>&ast;</sup>
+ 3. 0<sup>&ast;</sup>10<sup>&ast;</sup>
+ 4. 0<sup>&ast;</sup>1<sup>&ast;</sup>0<sup>&ast;</sup>
  
 Based on the automaton we have, we can easily see that the correct answer is **option 3**.
 
@@ -62,10 +62,10 @@ Based on the automaton we have, we can easily see that the correct answer is **o
 
 Which of the following regular expressions generates the same language as the automaton accepts?
 
- 1. 0<sup>*</sup>10<sup>*</sup>10<sup>*</sup>(10<sup>*</sup>10<sup>*</sup>10<sup>*</sup>)<sup>*</sup>
- 2. (1<sup>*</sup>0<sup>*</sup>10<sup>*</sup>10<sup>*</sup>)<sup>*</sup>
- 3. 0<sup>*</sup>10<sup>*</sup>1(0<sup>*</sup>10<sup>*</sup>10<sup>*</sup>1)<sup>*</sup>
- 4. (0<sup>*</sup>1)<sup>*</sup>(0<sup>*</sup>10<sup>*</sup>10<sup>*</sup>10<sup>*</sup>)<sup>*</sup>
+ 1. 0<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>(10<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>)<sup>&ast;</sup>
+ 2. (1<sup>&ast;</sup>0<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>)<sup>&ast;</sup>
+ 3. 0<sup>&ast;</sup>10<sup>&ast;</sup>1(0<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>1)<sup>&ast;</sup>
+ 4. (0<sup>&ast;</sup>1)<sup>&ast;</sup>(0<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>)<sup>&ast;</sup>
  
 Based on the language L and the automaton above we can see that the correct answer is **option 1**.
 
