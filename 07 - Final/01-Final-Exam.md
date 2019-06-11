@@ -107,13 +107,13 @@ We can easily see that the number of paths `001` is 3 thus the correct answer is
 
 Which of the following regular expressions DOES NOT generate the same language as the automaton accepts?
 
- 1. 0<sup>*</sup>(0+1)0<sup>*</sup>(0+1)
- 2. (0+1)(0+1)0<sup>*</sup> 
- 3. 0<sup>*</sup>(0+10<sup>*</sup>)(0+1)
- 4. (0+1)00<sup>*</sup>+00<sup>*</sup>10<sup>*</sup>+0<sup>*</sup>10<sup>*</sup>1
+ 1. 0<sup>&ast;</sup>(0+1)0<sup>&ast;</sup>(0+1)
+ 2. (0+1)(0+1)0<sup>&ast;</sup> 
+ 3. 0<sup>&ast;</sup>(0+10<sup>&ast;</sup>)(0+1)
+ 4. (0+1)00<sup>&ast;</sup>+00<sup>&ast;</sup>10<sup>&ast;</sup>+0<sup>&ast;</sup>10<sup>&ast;</sup>1
  
-We can easily see from the automaton that the one which fails to even be parsed by it is (0+1)(0+1)0<sup>*</sub> and thus the
- correct answer is **option 2**.
+We can easily see from the automaton that the one which fails to even be parsed by it is (0+1)(0+1)0<sup>&ast;</sup> 
+and thus the correct answer is **option 2**.
  
 ## Regular and Context-Free Languages
 
