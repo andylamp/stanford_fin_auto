@@ -76,6 +76,10 @@ In my case I had the following options to choose from:
  3. `A` → `b`
  4. `B` → `b`
  
+ We can easily see from the tree above that all options that have a derivation cannot be a production of `G`,
+ as `S` definitely does not translate to `CB`, `A` does not produce `b` in any leaf node, and finally `B` never
+ produced just `b` as is seem from the tree. Thus the correct answer in this instance is **option 2**.
+ 
 # Question 4
 
 Below we have eight simple grammars, each of which generates an infinite language of strings. These strings tend to 
