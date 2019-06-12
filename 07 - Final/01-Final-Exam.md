@@ -51,10 +51,10 @@ Based on L we generated, the correct answer is **option 4**.
 Which of the following regular expressions takes the automaton from state `A` to state `B` 
 without passing through state `C`?
 
- 1. `0*1`
- 2. `0*(0+1)0*`
- 3. `0*10*`
- 4. `0*1*0*`
+ 1. 0<sup>*</sup>1
+ 2. 0<sup>&ast;</sup>(0+1)0<sup>&ast;</sup>
+ 3. 0<sup>&ast;</sup>10<sup>&ast;</sup>
+ 4. 0<sup>&ast;</sup>1<sup>&ast;</sup>0<sup>&ast;</sup>
  
 Based on the automaton we have, we can easily see that the correct answer is **option 3**.
 
@@ -62,10 +62,10 @@ Based on the automaton we have, we can easily see that the correct answer is **o
 
 Which of the following regular expressions generates the same language as the automaton accepts?
 
- 1. `0*10*10*(10*10*10*)*`
- 2. `(1*0*10*10*)*`
- 3. `0*10*1(0*10*10*1)*`
- 4. `(0*1)*(0*10*10*10*)*`
+ 1. 0<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>(10<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>)<sup>&ast;</sup>
+ 2. (1<sup>&ast;</sup>0<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>)<sup>&ast;</sup>
+ 3. 0<sup>&ast;</sup>10<sup>&ast;</sup>1(0<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>1)<sup>&ast;</sup>
+ 4. (0<sup>&ast;</sup>1)<sup>&ast;</sup>(0<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>10<sup>&ast;</sup>)<sup>&ast;</sup>
  
 Based on the language L and the automaton above we can see that the correct answer is **option 1**.
 
@@ -107,13 +107,13 @@ We can easily see that the number of paths `001` is 3 thus the correct answer is
 
 Which of the following regular expressions DOES NOT generate the same language as the automaton accepts?
 
- 1. 0*(0+1)0*(0+1)
- 2. (0+1)(0+1)0* 
- 3. 0*(0+10*)(0+1)
- 4. (0+1)00*+00*10*+0*10*1
+ 1. 0<sup>&ast;</sup>(0+1)0<sup>&ast;</sup>(0+1)
+ 2. (0+1)(0+1)0<sup>&ast;</sup> 
+ 3. 0<sup>&ast;</sup>(0+10<sup>&ast;</sup>)(0+1)
+ 4. (0+1)00<sup>&ast;</sup>+00<sup>&ast;</sup>10<sup>&ast;</sup>+0<sup>&ast;</sup>10<sup>&ast;</sup>1
  
-We can easily see from the automaton that the one which fails to even be parsed by it is (0+1)(0+1)0* and thus the
- correct answer is **option 2**.
+We can easily see from the automaton that the one which fails to even be parsed by it is (0+1)(0+1)0<sup>&ast;</sup> 
+and thus the correct answer is **option 2**.
  
 ## Regular and Context-Free Languages
 
