@@ -282,11 +282,11 @@ in leftmost and rightmost derivations with respect to T.
 
 When we apply the CYK algorithm to the grammar
 
- * S -> AB
- * A -> BB | a
- * B -> AA | b
+ * `S` -> `AB`
+ * `A` -> `BB` | `a`
+ * `B` -> `AA` | `b`
 
-and the input babba,
+and the input `babba`,
 
 What is the value of X<sub>24</sub>, that is, the set of variables that derive the string from positions 
 2 to 4 of the input? (Check all and only the members of X<sub>24</sub>).
