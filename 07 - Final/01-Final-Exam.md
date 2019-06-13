@@ -293,6 +293,18 @@ What is the value of X<sub>24</sub>, that is, the set of variables that derive t
 
 ### Answer
 
+The full CYK table for the aforementioned string is shown below
+
+|     |     |     |     |     |
+|-----|-----|-----|-----|-----|
+| `X_{15} = {S,A,B}`|                 |                |                |     |
+| `X_{14} = {A}`    | `X_{25} = {A,B}`|                |                |     |
+| `X_{13} = {}`     | `X_{24} = {B}`  | `X_{35} = {B}` |                |     |
+| `X_{12} = {}`     | `X_{23} = {S}`  | `X_{34} = {A}` | `X_{45} = {}`  |     |
+| `X_{11} = {B}`    | `X_{22} = {A}`  | `X_{33} = {B}` | `X_{44} = {B}` | `X_{55} = {A}` |
+
+We can easily see that the correct answer to the posed question is X<sub>24</sub> = {B}.
+
 ## Grammar Simplification
 
 ### Answer
