@@ -219,7 +219,6 @@ For example, if L = {0123, 01234, 000000, 11111} then the result of the operatio
  
 This operation, as per lectures, holds only for the regular and **not** for the context free languages.
 
-
 ## Context-Free Grammars
 
 Given the following parse tree T that parses a context-free grammar G - answer the following questions for the
@@ -338,7 +337,81 @@ mapped to L2 using h<sup>-1</sup>, namely: h<sup>-1</sup>(101) → ba as 01101 c
 
 ## Turing Machines
 
+The Turing machine M has states `q`, `p`, and `f`. State `q` is the start state, 
+and `f` is the accepting state. The input alphabet is `{0,1}` and the tape alphabet 
+is `{0,1,B}`; `B` is the blank. The transitions of `M` are:
+
+`δ(q,0) = (p,0,R)`
+
+`δ(q,1) = (p,0,R)`
+
+`δ(p,0) = (p,0,R)`
+
+`δ(p,1) = (q,1,L)`
+
+`δ(p,B) = (f,0,R)`
+
+Thus the state transition table for `M` is the following
+
+| State | Tape Symbol | Move |
+|:-------:|:-------:|:-------:|
+|  `q`  |   `0`   | `(p, 0, R)` |
+|  `q`  |   `1`   | `(p, 0, R)` |
+|  `p`  |   `0`   | `(p, 0, R)` |
+|  `p`  |   `1`   | `(p, 0, L)` |
+|  `p`  |   `B`   | `(f, 0, R)` |
+
+
 ### Answer
+
+#### Part A
+
+What happens when given to `M` as described above input `w1` = `100`?
+
+ 1. Accepts.
+ 2. Halts without accepting.
+ 3. Does not halt.
+ 
+##### Expanding of `w1`
+
+ 1. `q100`, found `1` on tape thus `q` → `(p, 0, R)`
+ 2. `1p00`, found `0` on tape thus `p` → `(p, 0, R)`
+ 3. `10p0`, found `0` on tape thus `p` → `(p, 0, R)`
+ 4. `100p`, found `0` on tape thus `p` → `(p, 0, R)`
+ 5. `100p`, found `B` on tape thus `p` → `(f, 0, R)` and thus we **accept**
+
+#### Part B
+
+What happens when given to `M` as described above input `w2` = `001`?
+
+ 1. Accepts.
+ 2. Halts without accepting.
+ 3. Does not halt.
+ 
+##### Expanding of `w2`
+
+ 1. `q001`, found `0` on tape thus `q` → `(p, 0, R)`
+ 2. `0p01`, found `0` on tape thus `p` → `(p, 0, R)`
+ 3. `00p1`, found `0` on tape thus `p` → `(p, 0, R)`
+ 4. `00p1`, found `1` on tape thus `p` → `(p, 0, L)`
+ 5. `0p01`, found `0` on tape thus `p` → `(p, 0, R)`
+ 
+Notice that in this instance, the Turing machine will loop between states 4 and 5 
+indefinitely, which means that we will **not halt**.
+
+ 
+#### Part C
+
+What happens when given to `M` as described above input `w3` = `ε`?
+
+ 1. Accepts.
+ 2. Halts without accepting.
+ 3. Does not halt.
+ 
+This case is quite easy - as there is no transition using the empty string at the start
+ as we can only transition when we see an empty character at the tape from state `p` and 
+ not from state `q`. Thus this fact will cause the machine to halt without accepting; 
+ hence, the correct answer is **option 2**.
 
 ## Rice's Theorem
 
