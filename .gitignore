@@ -1,5 +1,4 @@
 # idea specific files
 .idea
-*.iml
-
+# mac specific files
 .DS_Store
