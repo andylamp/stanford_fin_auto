@@ -341,7 +341,7 @@ Recall that a *nullable* symbol is the one that holds `A` -><sup>*</sup> `ε`, w
  
 This the nullable symbols are `A` and `C`, hence the correct answer is **option 2** and **option 4**.  
 
-For brevity, the elimination of `ε`-productions for `G` provided above follows:
+For brevity, the elimination of `ε`-productions for `G` provided above forming `G'` is:
 
 `S` -> `AB` | `B` | `b`
 
