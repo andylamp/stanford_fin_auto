@@ -306,7 +306,56 @@ We can easily see that the correct answer to the posed question is X<sub>24</sub
 
 ## Grammar Simplification
 
+The following questions are based on the following grammar `G`:
+
+`S` -> `AB` | `b`
+
+`A` -> `aA` | `ε`
+
+`B` -> `CD`
+
+`C` -> `bA` | `AA`
+
+`D` -> `AB` | `BC`
+
+For each question, to get credit you must check all and only the symbols that have the stated property.
+
 ### Answer
+
+Let's start by performing a grammar simplification on `G`
+
+#### Part A
+
+Given `G`, check all and only the nullable symbols.
+
+ 1. `S`
+ 2. `A`
+ 3. `B`
+ 4. `C`
+ 5. `D`
+
+#### Part B
+
+Given `G`, check all and only the variables that derive a terminal string. 
+
+ 1. `S`
+ 2. `A`
+ 3. `B`
+ 4. `C`
+ 5. `D`
+
+
+#### Part C
+
+Now, modify the grammar to eliminate all productions that involve one or more symbols that do 
+not derive a terminal string. Given the new grammar `G'`, check all and only the variables that 
+appear in some sentential form derived from S using this modified grammar.
+
+ 1. `S`
+ 2. `A`
+ 3. `B`
+ 4. `C`
+ 5. `D`
 
 ## Homomorphisms
 
