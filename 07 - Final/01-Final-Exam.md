@@ -333,6 +333,28 @@ Given `G`, check all and only the nullable symbols.
  3. `B`
  4. `C`
  5. `D`
+ 
+Recall that a *nullable* symbol is the one that holds `A` -><sup>*</sup> `ε`, which in our case is it easy to see that
+
+ 1. `A` -> `ε`
+ 2. `C` -> `bA` | `AA` -><sup>*</sup> `ε`
+ 
+This the nullable symbols are `A` and `C`, hence the correct answer is **option 2** and **option 4**.  
+
+For brevity, the elimination of `ε`-productions for `G` provided above follows:
+
+`S` -> `AB` | `B` | `b`
+
+`A` -> `aA` | `a`
+
+`B` -> `CD`
+
+`C` -> `bA` | `b` | `AA` | `A`
+
+`D` -> `AB` | `B` | `BC`
+
+Strategy: we see that `A` -> `ε`, thus we go and replace all instances of `A` with `ε` to create the new states,
+these are then merged - as shown above - into our previous states of `G` to form a non-`ε` version of `G`.
 
 #### Part B
 
@@ -343,6 +365,12 @@ Given `G`, check all and only the variables that derive a terminal string.
  3. `B`
  4. `C`
  5. `D`
+ 
+We can easily see that in grammar `G` provided above the symbols that derive a terminal string are the following:
+
+ 1. `S` -> `b` (directly)
+ 2. `A` -> `ε` (directly)
+ 3. `C` -> `bA` | `AA` -><sup>*</sup> `ε` (transitively)
 
 
 #### Part C
