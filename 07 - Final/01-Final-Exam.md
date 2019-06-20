@@ -389,6 +389,42 @@ Recall from our grammar `G'` found previously (and the original`G` for that matt
 are useful to keep are only those that derive *terminal* strings. We can see that in the `ε`-free grammar `G'` 
 that these symbols are `S` and `A`.
 
+Moreover, we now have to eliminate the unit productions which are
+
+ 1. `S` -> `B` 
+ 2. `C` -> `A`
+ 3. `D` -> `B`
+ 
+The simplified grammar is as follows:
+
+`S` -> `AB` | `CD` | `b`
+
+`A` -> `aA` | `a`
+
+`B` -> `CD`
+
+`C` -> `bA` | `b` | `AA` | `aA` | `a`
+
+`D` -> `AB` | `CD` | `BC`
+
+Now, we have to eliminate the useless productions and to do that we need to first find a set with the terminal
+symbols as such:
+
+ * {`a`, `b`}
+ 
+Then, we need to find the reachable states for these terminal symbols, namely `S`, `A`, and `C` which are then
+added to the above set as shown below
+
+ * {`a`, `b`, `S`, `A`, `C`}
+ 
+We can see that no other other states can be added and thus `B` and `D` are *redundant*; hence, all states and
+transitions involving these have to be removed - the resulting grammar is only 
+
+`S` -> `b`
+
+Which is also the correct answer to this question, as it is already in sentential form, thus the correct
+answer is **option 1** (and only that).
+ 
 ## Homomorphisms
 
 Let h be the homomorphism defined by 
