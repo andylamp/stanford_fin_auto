@@ -339,7 +339,7 @@ Recall that a *nullable* symbol is the one that holds `A` -><sup>*</sup> `ε`, w
  1. `A` -> `ε`
  2. `C` -> `bA` | `AA` -><sup>*</sup> `ε`
  
-This the nullable symbols are `A` and `C`, hence the correct answer is **option 2** and **option 4**.  
+This the nullable symbols are `A` and `C`.  
 
 For brevity, the elimination of `ε`-productions for `G` provided above forming `G'` is:
 
@@ -355,6 +355,8 @@ For brevity, the elimination of `ε`-productions for `G` provided above forming 
 
 Strategy: we see that `A` -> `ε`, thus we go and replace all instances of `A` with `ε` to create the new states,
 these are then merged - as shown above - into our previous states of `G` to form a non-`ε` version of `G`.
+
+Based on the above, the correct answer are **option 2** and **option 4**
 
 #### Part B
 
@@ -372,6 +374,7 @@ We can easily see that in grammar `G` provided above the symbols that derive a t
  2. `A` -> `ε` (directly)
  3. `C` -> `bA` | `AA` -><sup>*</sup> `ε` (transitively)
 
+Thus the correct options are **option 1, 2, 4**
 
 #### Part C
 
