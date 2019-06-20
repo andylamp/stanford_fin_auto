@@ -384,6 +384,10 @@ appear in some sentential form derived from S using this modified grammar.
  3. `B`
  4. `C`
  5. `D`
+ 
+Recall from our grammar `G'` found previously (and the original`G` for that matter), the only symbols that 
+are useful to keep are only those that derive *terminal* strings. We can see that in the `ε`-free grammar `G'` 
+that these symbols are `S` and `A`.
 
 ## Homomorphisms
 
