@@ -422,7 +422,7 @@ transitions involving these have to be removed - the resulting grammar is only
 
 `S` -> `b`
 
-Which is also the correct answer to this question, as it is already in sentential form, thus the correct
+Which is also the correct answer to this question, as it is already in sentential form. Thus, the correct
 answer is **option 1** (and only that).
  
 ## Homomorphisms
